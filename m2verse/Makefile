@@ -31,13 +31,17 @@ include $(DEVKITARM)/3ds_rules
 #     - icon.png
 #     - <libctru folder>/default_icon.png
 #---------------------------------------------------------------------------------
-TARGET		:=	$(notdir $(CURDIR))
+TARGET		:=	release/$(notdir $(CURDIR))
 BUILD		:=	build
 SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
 GRAPHICS	:=	gfx
 GFXBUILD	:=	$(BUILD)
+APP_TITLE := M2verse
+APP_DESCRIPTION := A Miiverse 2 homebrew project
+APP_AUTHOR := Erebz Bobow
+ICON := icon.png
 #ROMFS		:=	romfs
 #GFXBUILD	:=	$(ROMFS)/gfx
 

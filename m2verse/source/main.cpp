@@ -3,6 +3,8 @@
 #include <string.h>
 #include <3ds.h>
 
+#include "M2VPostData.h"
+
 #define USERNAME_MAX_LENGTH 10
 
 struct Date {
@@ -14,7 +16,7 @@ struct Date {
 };
 
 struct M2VPostInfos {
-	char[USERNAME_MAX_LENGTH] username;
+	char username[USERNAME_MAX_LENGTH];
 	u32 type = 0; //0 : text, 1 : drawing
 	Date date;
 	M2VPostData * data;

@@ -3,10 +3,10 @@
 
 class M2VPostData{
 private:
-
-  u32 data size;
+  u32 dataSize;
   u32 type;
-  
+
+public:
 
 
 
