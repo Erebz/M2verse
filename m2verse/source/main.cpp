@@ -5,9 +5,19 @@
 
 #define USERNAME_MAX_LENGTH 10
 
-struct M2VPost {
+struct Date {
+	u32 day = 1;
+	u32 month = 1;
+	u32 year = 2019;
+	u32 hour = 0;
+	u32 minute = 0;
+};
+
+struct M2VPostInfos {
 	char[USERNAME_MAX_LENGTH] username;
-	u32 type = 0;
+	u32 type = 0; //0 : text, 1 : drawing
+	Date date;
+	M2VPostData * data;
 };
 
 int main(int argc, char* argv[])
