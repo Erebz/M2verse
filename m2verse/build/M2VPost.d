@@ -1,4 +1,4 @@
-main.o: E:/GitDir/M2verse/m2verse/source/main.cpp \
+M2VPost.o: E:/GitDir/M2verse/m2verse/source/M2VPost.cpp \
  E:/GitDir/M2verse/m2verse/source/M2VPost.h \
  E:/DEV/devkitPro/libctru/include/3ds.h \
  E:/DEV/devkitPro/libctru/include/3ds/types.h \
