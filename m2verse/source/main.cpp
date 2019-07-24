@@ -31,13 +31,21 @@ void keyboardInput(char * buffer, unsigned int bufferSize, char hint[64]){
 int main(int argc, char* argv[])
 {
 	gfxInitDefault();
-	consoleInit(GFX_TOP, NULL);
+	PrintConsole topScreen, bottomScreen, leftWindow, rightWindow;
+	consoleInit(GFX_TOP, &topScreen);
+	consoleInit(GFX_BOTTOM, &bottomScreen);
+	consoleInit(GFX_TOP, &leftWindow);
+	consoleInit(GFX_TOP, &rightWindow);
 
-	/*	printf("Press A to enter a name.\n"); //x1b[r;cH
-	printf("Press B to enter a title.\n");
-	printf("Press Y to enter a text.\n");
-	printf("Press X to finish the post.\n");
-	*/
+	consoleSetWindow(&leftWindow, 1, 1, 23, 28);
+	consoleSetWindow(&rightWindow, 26, 1, 23, 28);
+	consoleSelect(&leftWindow);
+  printf("This text is in the left window!\n");
+  consoleSelect(&rightWindow);
+  printf("This text is in the right window!\n");
+  consoleSelect(&topScreen);
+	consoleSelect(&bottomScreen);
+
 	char username[USERNAME_MAX_LENGTH + 1] = {'\0'};
 	char title[TITLE_MAX_LENGTH + 1] = {'\0'};
 	char text[TEXT_MAX_LENGTH + 1] = {'\0'};
