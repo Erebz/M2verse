@@ -1,5 +1,4 @@
-#include "M2VPost.h"
-#define MAX_KBD_INPUT 144
+/*#include "M2VPost.h"
 
 u32 waitInput(u32 wait){
 	u32 input = 0;
@@ -117,3 +116,4 @@ int main(int argc, char* argv[])
 	gfxExit();
 	return 0;
 }
+*/

@@ -1,23 +1,11 @@
-#ifndef M2V_POST
-#define M2V_POST
+#ifndef M2V_POST_H
+#define M2V_POST_H
 
+#include "M2VData.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <3ds.h>
-#define USERNAME_MAX_LENGTH 15
-#define TITLE_MAX_LENGTH 30
-#define TEXT_MAX_LENGTH 144
-#define DRAW_MAX_X 100
-#define DRAW_MAX_Y 50
-
-struct Date {
-	int day = 1;
-	int month = 1;
-	int year = 2019;
-	int hour = 0;
-	int minute = 0;
-};
 
 class M2VTextPost{
 private:
@@ -57,4 +45,4 @@ public:
 };
 
 
-#endif //M2V_POST
+#endif //M2V_POST_H

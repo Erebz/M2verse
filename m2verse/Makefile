@@ -33,7 +33,7 @@ include $(DEVKITARM)/3ds_rules
 #---------------------------------------------------------------------------------
 TARGET		:=	release/$(notdir $(CURDIR))
 BUILD		:=	build
-SOURCES		:=	source
+SOURCES		:=	source/core source/c2d
 DATA		:=	data
 INCLUDES	:=	include
 GRAPHICS	:=	gfx
@@ -42,8 +42,8 @@ APP_TITLE := M2verse
 APP_DESCRIPTION := A Miiverse 2 homebrew project
 APP_AUTHOR := Erebz Bobow
 ICON := icon.png
-#ROMFS		:=	romfs
-#GFXBUILD	:=	$(ROMFS)/gfx
+ROMFS		:=	romfs
+GFXBUILD	:=	$(ROMFS)/gfx
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -61,7 +61,7 @@ CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions -std=gnu++11
 ASFLAGS	:=	-g $(ARCH)
 LDFLAGS	=	-specs=3dsx.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
 
-LIBS	:= -lctru -lm
+LIBS	:= -lcitro2d -lcitro3d -lctru -lm
 
 #---------------------------------------------------------------------------------
 # list of directories containing libraries, this must be the top level containing
