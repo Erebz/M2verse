@@ -15,14 +15,14 @@ M2V_C2D::~M2V_C2D(){
 }
 
 void M2V_C2D::init(){
+  romfsInit();
   gfxInitDefault();
   C3D_Init(C3D_DEFAULT_CMDBUF_SIZE);
   C2D_Init(C2D_DEFAULT_MAX_OBJECTS);
   C2D_Prepare();
-  consoleInit(GFX_BOTTOM, NULL);
 
   this->top = C2D_CreateScreenTarget(GFX_TOP, GFX_LEFT);
-
+  this->bottom = C2D_CreateScreenTarget(GFX_BOTTOM, GFX_LEFT);
   this->currentPage = new ConnectionPage(this->top, this->bottom);
 }
 
@@ -32,6 +32,7 @@ void M2V_C2D::quit(){
   C2D_Fini();
   C3D_Fini();
   gfxExit();
+  romfsExit();
 }
 
 void M2V_C2D::run(){

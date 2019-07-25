@@ -1,60 +1,79 @@
 #include "M2VPage.h"
+#include <cassert>
+#include <fstream>
+#include "spritesMenu.h"
 
-M2VPage::~M2VPage(){
-
+//================================================M2VPage==============================================
+void M2VPage::textWrite(const char * str, float x, float y, float scale_x, float scale_y, u32 color){
+  C2D_TextBufClear(g_staticBuf);
+  C2D_TextParse(&g_staticText, g_staticBuf, str);
+  C2D_TextOptimize(&g_staticText);
+  C2D_DrawText(&g_staticText, C2D_WithColor, x, y, scale_x, scale_x, scale_y, color);
 }
 
-ConnectionPage::~ConnectionPage(){
-
+void M2VPage::message(const char * str){
+  C2D_DrawRectangle(20, TOP_MAX_Y-100, 0, TOP_MAX_X-40, 80, clrBox, clrBox, clrBox, clrBox);
+  textWrite(str, 30.0f, 150.0f, 0.8f, 0.8f, clrText);
 }
+//=====================================================================================================
 
 
+//================================================ConnectionPage=======================================
 void ConnectionPage::run(){
-  //this->init();
+  this->init();
   this->loop();
 }
 
-void ConnectionPage::draw(){
+void ConnectionPage::init(){
+  spriteSheet = C2D_SpriteSheetLoad("romfs:/gfx/spritesMenu.t3x");
+  //if (!spriteSheet) svcBreak(USERBREAK_PANIC);
+  spriteNb = C2D_SpriteSheetCount(spriteSheet);
+  /*std::ofstream file("log.txt");
+  assert(file.is_open());
+  file << spriteNb;
+  file << 30000;
+  file.close();*/
+  assert(spriteNb > 0);
+  sprites = new C2D_Sprite[spriteNb];
+  for(unsigned int i=0; i<spriteNb; i++){
+    C2D_SpriteFromSheet	(&sprites[i], spriteSheet, i);
+    C2D_SpriteSetCenter(&sprites[i], 0.5f, 0.5f);
+    C2D_SpriteSetPos(&sprites[i], TOP_MAX_X/2, TOP_MAX_Y/2 - 30);
+  }
+  C2D_SpriteSetScale(&sprites[0], 0.17f, 0.17f);
+}
 
+void ConnectionPage::draw(){
+  C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
+  C2D_TargetClear(top, clrClear);
+  C2D_SceneBegin(top);
+  C2D_DrawSprite(&sprites[0]);
+  message("Welcome to M2V ! Please enter \nyour username and your password.");
+
+  C2D_SceneBegin(bottom);
+  //C2D_DrawRectangle(20, BOTTOM_MAX_Y-100, 0, BOTTOM_MAX_X-40, 80, clrBox, clrBox, clrBox, clrBox);
+  //C2D_DrawRectangle(20, BOTTOM_MAX_Y-100, 0, BOTTOM_MAX_X-40, 80, clrBox, clrBox, clrBox, clrBox);
+  C2D_TargetClear(bottom, clrClear);
+  C2D_DrawRectangle(160, 40, 0, 120, 45, clrBox, clrBox, clrBox, clrBox);
+  C2D_DrawRectangle(160, 105, 0, 120, 45, clrBox, clrBox, clrBox, clrBox);
+  C2D_DrawRectangle(40, 170, 0, 240, 55, clrBox2, clrBox2, clrBox2, clrBox2);
+  textWrite("Username : ", 40, 50, 0.8f, 0.8f, clrText);
+  textWrite("Password : ", 40, 115, 0.8f, 0.8f, clrText);
+  textWrite("CONNECT TO M2V", 65, 185, 0.85f, 0.85f, clrClear);
+  C3D_FrameEnd(0);
 }
 
 void ConnectionPage::loop(){
-  u32 clrGreen = C2D_Color32(0x00, 0xFF, 0x00, 0xFF);
-  u32 clrBlue  = C2D_Color32(0x00, 0x00, 0xFF, 0xFF);
-
-  u32 clrClear = C2D_Color32(0x00, 0xFF, 0x00, 0xFF);
-
-  C2D_TextBuf g_staticBuf;
-  C2D_Text g_staticText;
-  g_staticBuf  = C2D_TextBufNew(4096);
-  C2D_TextParse(&g_staticText, g_staticBuf, "Bienvenue dans Miiverse 2 !");
-  C2D_TextOptimize(&g_staticText);
-
-
-
-
-  // Main loop
-  while (aptMainLoop())
-  {
-    //this->draw();
+  bool quit = false;
+  while (aptMainLoop() && !quit){
+    //Treat inputs
     hidScanInput();
-
-    // Respond to user input
     u32 kDown = hidKeysDown();
-    if (kDown & KEY_START)
-    break; // break in order to return to hbmenu
+    if (kDown & KEY_START) quit = true;
 
-    // Render the scene
-    C3D_FrameBegin(C3D_FRAME_SYNCDRAW);
-    C2D_TargetClear(top, clrClear);
-    C2D_SceneBegin(top);
-    C2D_DrawRectangle(20, TOP_MAX_Y-100, 0, TOP_MAX_X-40, 80, clrBlue, clrBlue, clrBlue, clrBlue);
-
-    // Draw static text strings
-    float text2PosX = 400.0f - 16.0f - g_staticText.width*0.75f; // right-justify
-    C2D_DrawText(&g_staticText, 0, 30.0f, 150.0f, 0.0f, 0.8f, 0.8f);
-
-    C3D_FrameEnd(0);
+    //Render the scene
+    this->draw();
   }
-	C2D_TextBufDelete(g_staticBuf);
 }
+
+//=====================================================================================================

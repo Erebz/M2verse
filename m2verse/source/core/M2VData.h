@@ -11,7 +11,7 @@
 #define TOP_MAX_Y 240
 #define TOP_MAX_X 400
 #define BOTTOM_MAX_Y 240
-#define BOTTOM_MAX_X 400
+#define BOTTOM_MAX_X 320
 
 enum Region : int{
   NONE = 0,

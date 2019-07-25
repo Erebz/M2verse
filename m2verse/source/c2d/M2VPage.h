@@ -15,29 +15,49 @@ protected:
   //M2V_C2D * app = NULL;
   C3D_RenderTarget * top = NULL;
   C3D_RenderTarget * bottom = NULL;
+  u32 clrGreen = C2D_Color32(0x83, 0xEC, 0x8A, 0xFF);
+  u32 clrBlue  = C2D_Color32(0x00, 0x00, 0xFF, 0xFF);
+  u32 clrClear = C2D_Color32(0x04, 0x2D, 0x30, 0xFF);
+  u32 clrWhite = C2D_Color32(0x00, 0x00, 0x00, 0xFF);
+  u32 clrBox = C2D_Color32(0x09, 0x5A, 0x60, 0xC8);
+  u32 clrBox2 = C2D_Color32(0x84, 0xAC, 0xAF, 0xC8);
+  u32 clrText = C2D_Color32(0x8B, 0x8F, 0x52, 0xFF);
+  C2D_TextBuf g_staticBuf;
+  C2D_Text g_staticText;
+  C2D_SpriteSheet spriteSheet;
+  C2D_Sprite * sprites = NULL;
+  unsigned int spriteNb = 0;
   virtual void draw() = 0;
   virtual void loop() = 0;
-  void message(char * message, unsigned int messageSize);
+  void textWrite(const char * str, float x, float y, float scale_x, float scale_y, u32 color);
+  void message(const char * str);
   void dialog();
   void question();
 
 public:
-  M2VPage(C3D_RenderTarget * top = NULL, C3D_RenderTarget * bottom = NULL) : top(top), bottom(bottom) {}
+  M2VPage(C3D_RenderTarget * top = NULL, C3D_RenderTarget * bottom = NULL) : top(top), bottom(bottom) {
+    g_staticBuf  = C2D_TextBufNew(4096);
+  }
   M2VPage();
-  virtual ~M2VPage();
+  virtual ~M2VPage(){
+    C2D_TextBufDelete(g_staticBuf);
+    delete [] sprites;
+    sprites = NULL;
+    C2D_SpriteSheetFree(spriteSheet);
+  }
   virtual void run() = 0;
 };
 
 class ConnectionPage : public M2VPage{
 private:
-  //fonctions de requetes http pour la connexion
+  //insérer ici fonctions de requetes http pour la connexion
   void draw();
   void loop();
-  //void init();
+  void init();
 public:
   ConnectionPage();
   ConnectionPage(C3D_RenderTarget * top = NULL, C3D_RenderTarget * bottom = NULL) : M2VPage(top, bottom) {}
-  virtual ~ConnectionPage();
+  virtual ~ConnectionPage(){}
 
   void run();
 };
