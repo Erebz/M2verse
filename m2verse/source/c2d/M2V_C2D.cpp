@@ -8,10 +8,10 @@ M2V_C2D::M2V_C2D(){
 M2V_C2D::~M2V_C2D(){
   if(this->currentPage != NULL) delete this->currentPage;
   this->currentPage = NULL;
-  if(this->top != NULL) delete this->top;
+  /*if(this->top != NULL) delete this->top;
   this->top = NULL;
   if(this->bottom != NULL) delete this->bottom;
-  this->bottom = NULL;
+  this->bottom = NULL;*/
 }
 
 void M2V_C2D::init(){
@@ -36,6 +36,7 @@ void M2V_C2D::quit(){
 
 void M2V_C2D::run(){
   this->init();
+  //peut etre mettre un while...
   if(this->currentPage != NULL) this->currentPage->run();
-  else this->quit();
+  this->quit();
 }
