@@ -1,7 +1,8 @@
-main_c2d.o: E:/GitDir/M2verse/m2verse/source/c2d/main_c2d.cpp \
- E:/GitDir/M2verse/m2verse/source/c2d/M2V_C2D.h \
- e:\gitdir\m2verse\m2verse\source\core\m2vpost.h \
- e:\gitdir\m2verse\m2verse\source\core\M2VData.h \
+ProfilePage.o: E:/GitDir/M2verse/m2verse/source/c2d/ProfilePage.cpp \
+ E:/GitDir/M2verse/m2verse/source/c2d/ProfilePage.h \
+ C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/citro2d.h \
+ C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/citro3d.h \
+ C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c3d/types.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/3ds.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/3ds/types.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/3ds/result.h \
@@ -82,11 +83,6 @@ main_c2d.o: E:/GitDir/M2verse/m2verse/source/c2d/main_c2d.cpp \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/3ds/romfs.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/3ds/font.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/3ds/gdbhio_dev.h \
- e:\gitdir\m2verse\m2verse\source\core\m2vdata.h \
- E:/GitDir/M2verse/m2verse/source/c2d/M2VPage.h \
- C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/citro2d.h \
- C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/citro3d.h \
- C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c3d/types.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c3d/maths.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c3d/mtxstack.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c3d/uniforms.h \
@@ -108,13 +104,18 @@ main_c2d.o: E:/GitDir/M2verse/m2verse/source/c2d/main_c2d.cpp \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/sprite.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/text.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/font.h \
- E:/GitDir/M2verse/m2verse/source/c2d/ProfilePage.h
+ e:\gitdir\m2verse\m2verse\source\core\m2vpost.h \
+ e:\gitdir\m2verse\m2verse\source\core\M2VData.h \
+ e:\gitdir\m2verse\m2verse\source\core\m2vdata.h \
+ E:/GitDir/M2verse/m2verse/source/c2d/M2VPage.h
 
-E:/GitDir/M2verse/m2verse/source/c2d/M2V_C2D.h:
+E:/GitDir/M2verse/m2verse/source/c2d/ProfilePage.h:
 
-e:\gitdir\m2verse\m2verse\source\core\m2vpost.h:
+C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/citro2d.h:
 
-e:\gitdir\m2verse\m2verse\source\core\M2VData.h:
+C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/citro3d.h:
+
+C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c3d/types.h:
 
 C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/3ds.h:
 
@@ -276,16 +277,6 @@ C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/3ds/font.
 
 C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/3ds/gdbhio_dev.h:
 
-e:\gitdir\m2verse\m2verse\source\core\m2vdata.h:
-
-E:/GitDir/M2verse/m2verse/source/c2d/M2VPage.h:
-
-C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/citro2d.h:
-
-C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/citro3d.h:
-
-C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c3d/types.h:
-
 C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c3d/maths.h:
 
 C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c3d/mtxstack.h:
@@ -328,4 +319,10 @@ C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/text.
 
 C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/font.h:
 
-E:/GitDir/M2verse/m2verse/source/c2d/ProfilePage.h:
+e:\gitdir\m2verse\m2verse\source\core\m2vpost.h:
+
+e:\gitdir\m2verse\m2verse\source\core\M2VData.h:
+
+e:\gitdir\m2verse\m2verse\source\core\m2vdata.h:
+
+E:/GitDir/M2verse/m2verse/source/c2d/M2VPage.h:

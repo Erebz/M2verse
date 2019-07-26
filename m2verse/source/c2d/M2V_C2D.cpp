@@ -3,15 +3,16 @@
 M2V_C2D::M2V_C2D(){
   this->top = NULL;
   this->bottom = NULL;
+  this->user.username = "Thibaut";
 }
 
 M2V_C2D::~M2V_C2D(){
   if(this->currentPage != NULL) delete this->currentPage;
   this->currentPage = NULL;
-  /*if(this->top != NULL) delete this->top;
+  if(this->top != NULL) delete this->top;
   this->top = NULL;
   if(this->bottom != NULL) delete this->bottom;
-  this->bottom = NULL;*/
+  this->bottom = NULL;
 }
 
 void M2V_C2D::init(){
@@ -24,6 +25,7 @@ void M2V_C2D::init(){
   this->top = C2D_CreateScreenTarget(GFX_TOP, GFX_LEFT);
   this->bottom = C2D_CreateScreenTarget(GFX_BOTTOM, GFX_LEFT);
   this->currentPage = new ConnectionPage(this->top, this->bottom);
+  this->page = CONNECTION_PAGE;
 }
 
 void M2V_C2D::quit(){
@@ -37,7 +39,39 @@ void M2V_C2D::quit(){
 
 void M2V_C2D::run(){
   this->init();
-  //peut etre mettre un while...
-  if(this->currentPage != NULL) this->currentPage->run();
+  while(aptMainLoop() && this->currentPage != NULL){
+    //Treat inputs
+    hidScanInput();
+    u32 kDown = hidKeysDown();
+    if (kDown & KEY_START) break;
+
+    Pages page = this->currentPage->run();
+    if(this->page != page){
+      this->page = page;
+      this->changePage();
+    }
+  }
   this->quit();
+}
+
+void M2V_C2D::changePage(){
+  if(currentPage != NULL) delete currentPage;
+  currentPage = NULL;
+  switch (this->page) {
+    case CONNECTION_PAGE:
+      this->currentPage = new ConnectionPage(this->top, this->bottom);
+    break;
+    case CONNECTION_VALID:
+      user.username = "Yaya";
+      user.connected = true;
+      user.region = EUR;
+      this->page = PROFILE_PAGE;
+      this->currentPage = new ProfilePage(this->user, this->top, this->bottom);
+    break;
+    case PROFILE_PAGE:
+      this->currentPage = new ProfilePage(this->user, this->top, this->bottom);
+    break;
+    default:
+    break;
+  }
 }

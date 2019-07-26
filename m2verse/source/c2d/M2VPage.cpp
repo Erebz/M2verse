@@ -1,7 +1,5 @@
 #include "M2VPage.h"
 #include <cassert>
-#include <fstream>
-#include "spritesMenu.h"
 
 //================================================M2VPage==============================================
 void M2VPage::textWrite(const char * str, float x, float y, float scale_x, float scale_y, u32 color){
@@ -15,24 +13,45 @@ void M2VPage::message(const char * str){
   C2D_DrawRectangle(20, TOP_MAX_Y-100, 0, TOP_MAX_X-40, 80, clrBox, clrBox, clrBox, clrBox);
   textWrite(str, 30.0f, 150.0f, 0.8f, 0.8f, clrText);
 }
+
+char * M2VPage::strAdd(const char * str1, const char * str2) const{
+    char * str3 = new char[strlen(str1) + strlen(str2) + 1];
+    unsigned int i, k=0;
+    for(i=0; i < strlen(str1); i++){
+      if(str1[i] != '\0') str3[i] = str1[i];
+      else str3[i] = ' ';
+    }
+    for(unsigned int j = i; j < strlen(str1) + strlen(str2); j++){
+      if(str2[strlen(str1) - i+k] != '\0') str3[j] = str2[strlen(str1) - i+k];
+      else str3[j] = ' ';
+      k++;
+    }
+    str3[strlen(str1) + strlen(str2)] = '\0';
+
+    return str3;
+}
+
 //=====================================================================================================
 
 
 //================================================ConnectionPage=======================================
-void ConnectionPage::run(){
-  this->init();
-  this->loop();
+Pages ConnectionPage::run(){
+  //Treat inputs
+  this->update();
+
+  //Render the scene
+  this->draw();
+
+  if(connectionValid){
+    return PROFILE_PAGE;
+  }else{
+    return CONNECTION_PAGE;
+  }
 }
 
 void ConnectionPage::init(){
   spriteSheet = C2D_SpriteSheetLoad("romfs:/gfx/spritesMenu.t3x");
-  //if (!spriteSheet) svcBreak(USERBREAK_PANIC);
   spriteNb = C2D_SpriteSheetCount(spriteSheet);
-  /*std::ofstream file("log.txt");
-  assert(file.is_open());
-  file << spriteNb;
-  file << 30000;
-  file.close();*/
   assert(spriteNb > 0);
   sprites = new C2D_Sprite[spriteNb];
   for(unsigned int i=0; i<spriteNb; i++){
@@ -41,6 +60,11 @@ void ConnectionPage::init(){
     C2D_SpriteSetPos(&sprites[i], TOP_MAX_X/2, TOP_MAX_Y/2 - 30);
   }
   C2D_SpriteSetScale(&sprites[0], 0.17f, 0.17f);
+}
+
+void ConnectionPage::update(){
+    u32 kDown = hidKeysDown();
+    if(kDown & KEY_A) connectionValid = true;
 }
 
 void ConnectionPage::draw(){
@@ -63,17 +87,5 @@ void ConnectionPage::draw(){
   C3D_FrameEnd(0);
 }
 
-void ConnectionPage::loop(){
-  bool quit = false;
-  while (aptMainLoop() && !quit){
-    //Treat inputs
-    hidScanInput();
-    u32 kDown = hidKeysDown();
-    if (kDown & KEY_START) quit = true;
-
-    //Render the scene
-    this->draw();
-  }
-}
 
 //=====================================================================================================

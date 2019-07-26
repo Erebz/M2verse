@@ -107,7 +107,8 @@ M2V_C2D.o: E:/GitDir/M2verse/m2verse/source/c2d/M2V_C2D.cpp \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/spritesheet.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/sprite.h \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/text.h \
- C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/font.h
+ C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/font.h \
+ E:/GitDir/M2verse/m2verse/source/c2d/ProfilePage.h
 
 E:/GitDir/M2verse/m2verse/source/c2d/M2V_C2D.h:
 
@@ -326,3 +327,5 @@ C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/sprit
 C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/text.h:
 
 C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/font.h:
+
+E:/GitDir/M2verse/m2verse/source/c2d/ProfilePage.h:

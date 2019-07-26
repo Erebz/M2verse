@@ -21,12 +21,21 @@ enum Region : int{
   OTHER
 };
 
+enum Pages : int{
+  CONNECTION_PAGE = 0,
+  CONNECTION_VALID,
+  ERROR_PAGE,
+  PROFILE_PAGE
+};
+
 struct User{
-  char username[USERNAME_MAX_LENGTH];
+  //char username[USERNAME_MAX_LENGTH];
+  char * username;
   int id = 0;
   char pwd[PWD_MAX_LENGTH];
   bool connected = false;
   Region region = NONE;
+  unsigned int followers = 0;
 };
 
 struct Date {

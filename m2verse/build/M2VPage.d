@@ -106,8 +106,7 @@ M2VPage.o: E:/GitDir/M2verse/m2verse/source/c2d/M2VPage.cpp \
  C:/Users/Yacine-ASUS/Documents/workspace/DEV/devkitPro/libctru/include/c2d/font.h \
  e:\gitdir\m2verse\m2verse\source\core\m2vpost.h \
  e:\gitdir\m2verse\m2verse\source\core\M2VData.h \
- e:\gitdir\m2verse\m2verse\source\core\m2vdata.h \
- E:/GitDir/M2verse/m2verse/build/spritesMenu.h
+ e:\gitdir\m2verse\m2verse\source\core\m2vdata.h
 
 E:/GitDir/M2verse/m2verse/source/c2d/M2VPage.h:
 
@@ -324,5 +323,3 @@ e:\gitdir\m2verse\m2verse\source\core\m2vpost.h:
 e:\gitdir\m2verse\m2verse\source\core\M2VData.h:
 
 e:\gitdir\m2verse\m2verse\source\core\m2vdata.h:
-
-E:/GitDir/M2verse/m2verse/build/spritesMenu.h:

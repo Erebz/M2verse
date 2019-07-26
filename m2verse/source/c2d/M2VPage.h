@@ -7,12 +7,12 @@
 #include <stdlib.h>
 #include "../core/M2VPost.h"
 #include "../core/M2VData.h"
+//#include "M2V_C2D.h"
 
 class M2VPage{
 private:
-  //
-protected:
   //M2V_C2D * app = NULL;
+protected:
   C3D_RenderTarget * top = NULL;
   C3D_RenderTarget * bottom = NULL;
   u32 clrGreen = C2D_Color32(0x83, 0xEC, 0x8A, 0xFF);
@@ -28,9 +28,10 @@ protected:
   C2D_Sprite * sprites = NULL;
   unsigned int spriteNb = 0;
   virtual void draw() = 0;
-  virtual void loop() = 0;
+  virtual void update() = 0;
   void textWrite(const char * str, float x, float y, float scale_x, float scale_y, u32 color);
   void message(const char * str);
+  char * strAdd(const char * str1, const char * str2) const;
   void dialog();
   void question();
 
@@ -45,21 +46,23 @@ public:
     sprites = NULL;
     C2D_SpriteSheetFree(spriteSheet);
   }
-  virtual void run() = 0;
+  virtual Pages run() = 0;
 };
 
 class ConnectionPage : public M2VPage{
 private:
   //insérer ici fonctions de requetes http pour la connexion
   void draw();
-  void loop();
+  void update();
   void init();
+  bool connectionValid = false;
 public:
   ConnectionPage();
-  ConnectionPage(C3D_RenderTarget * top = NULL, C3D_RenderTarget * bottom = NULL) : M2VPage(top, bottom) {}
+  ConnectionPage(C3D_RenderTarget * top = NULL, C3D_RenderTarget * bottom = NULL) : M2VPage(top, bottom) {
+    this->init();
+  }
   virtual ~ConnectionPage(){}
-
-  void run();
+  Pages run();
 };
 
 
