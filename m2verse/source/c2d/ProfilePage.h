@@ -15,6 +15,9 @@ private:
   void update();
   void init();
   User user;
+  virtual ButtonInput checkButtonInput() const{
+    return NO_INPUT;
+  }
 public:
   ProfilePage();
   ProfilePage(const User& user, C3D_RenderTarget * top = NULL, C3D_RenderTarget * bottom = NULL) : M2VPage(top, bottom) {

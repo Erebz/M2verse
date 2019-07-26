@@ -12,6 +12,8 @@
 class M2VPage{
 private:
   //M2V_C2D * app = NULL;
+  SwkbdState swkbd;
+  SwkbdButton button = SWKBD_BUTTON_NONE;
 protected:
   C3D_RenderTarget * top = NULL;
   C3D_RenderTarget * bottom = NULL;
@@ -34,6 +36,10 @@ protected:
   char * strAdd(const char * str1, const char * str2) const;
   void dialog();
   void question();
+  virtual ButtonInput checkButtonInput() const = 0;
+  void keyboardInput(char * buffer, unsigned int max, const char * hint);
+  unsigned int curX = 0, curY = 0;
+  bool input = false;
 
 public:
   M2VPage(C3D_RenderTarget * top = NULL, C3D_RenderTarget * bottom = NULL) : top(top), bottom(bottom) {
@@ -55,6 +61,11 @@ private:
   void draw();
   void update();
   void init();
+  ButtonInput checkButtonInput() const;
+  char nameBuf[USERNAME_MAX_LENGTH + 1];
+  char pwdBuf[PWD_MAX_LENGTH + 1];
+  char nameAff[10];
+  char pwdAff[10];
   bool connectionValid = false;
 public:
   ConnectionPage();

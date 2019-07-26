@@ -46,6 +46,7 @@ void M2V_C2D::run(){
     if (kDown & KEY_START) break;
 
     Pages page = this->currentPage->run();
+    gspWaitForVBlank();
     if(this->page != page){
       this->page = page;
       this->changePage();

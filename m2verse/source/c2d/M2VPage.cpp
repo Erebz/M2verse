@@ -15,22 +15,38 @@ void M2VPage::message(const char * str){
 }
 
 char * M2VPage::strAdd(const char * str1, const char * str2) const{
-    char * str3 = new char[strlen(str1) + strlen(str2) + 1];
-    unsigned int i, k=0;
-    for(i=0; i < strlen(str1); i++){
-      if(str1[i] != '\0') str3[i] = str1[i];
-      else str3[i] = ' ';
-    }
-    for(unsigned int j = i; j < strlen(str1) + strlen(str2); j++){
-      if(str2[strlen(str1) - i+k] != '\0') str3[j] = str2[strlen(str1) - i+k];
-      else str3[j] = ' ';
-      k++;
-    }
-    str3[strlen(str1) + strlen(str2)] = '\0';
+  char * str3 = new char[strlen(str1) + strlen(str2) + 1];
+  unsigned int i, k=0;
+  for(i=0; i < strlen(str1); i++){
+    if(str1[i] != '\0') str3[i] = str1[i];
+    else str3[i] = ' ';
+  }
+  for(unsigned int j = i; j < strlen(str1) + strlen(str2); j++){
+    if(str2[strlen(str1) - i+k] != '\0') str3[j] = str2[strlen(str1) - i+k];
+    else str3[j] = ' ';
+    k++;
+  }
+  str3[strlen(str1) + strlen(str2)] = '\0';
 
-    return str3;
+  return str3;
 }
 
+void M2VPage::keyboardInput(char * buffer, unsigned int max, const char * hint){
+  swkbdInit(&swkbd, SWKBD_TYPE_NORMAL, 2, max);
+  swkbdSetButton(&swkbd, SWKBD_BUTTON_LEFT, "Cancel", false);
+  swkbdSetButton(&swkbd, SWKBD_BUTTON_RIGHT, "Confirm", true);
+  swkbdSetHintText(&swkbd, hint);
+  char * result = new char[max];
+  button = swkbdInputText(&swkbd, result, max);
+
+  if(button & SWKBD_BUTTON_RIGHT && result[0] != '\0'){
+    for(unsigned int i=0; i < strlen(result); i++){
+      buffer[i] = result[i];
+    }
+    buffer[strlen(result)] = '\0';
+  }
+  delete result;
+}
 //=====================================================================================================
 
 
@@ -63,8 +79,51 @@ void ConnectionPage::init(){
 }
 
 void ConnectionPage::update(){
-    u32 kDown = hidKeysDown();
-    if(kDown & KEY_A) connectionValid = true;
+  u32 kDown = hidKeysDown();
+  if(kDown & KEY_A) connectionValid = true;
+
+  //Read the touch screen coordinates
+  touchPosition touch;
+  hidTouchRead(&touch);
+  if(touch.px > 0 && touch.py > 0){
+    curX = touch.px;
+    curY = touch.py;
+  }
+  if(touch.px == 0 && touch.py == 0){
+    if(curX != 0 && curY != 0){
+      input = true;
+    }
+  }
+  if(input){
+    switch (checkButtonInput()){
+      case USERNAME_INPUT:
+      for(int i=0; i<10; i++){nameAff[i] = ' ';}
+      nameAff[9] = '\0';
+      keyboardInput(nameBuf, USERNAME_MAX_LENGTH + 1, "Enter your username.");
+      for(int i=0; (i<10 && i<strlen(nameBuf)); i++){
+        nameAff[i] = nameBuf[i];
+      }
+      if(strlen(nameBuf) >= 10){
+        nameAff[6] = '.';
+        nameAff[7] = '.';
+        nameAff[8] = '.';
+        nameAff[9] = '\0';
+      }
+      break;
+      case PASSWORD_INPUT:
+      for(int i=0; i<10; i++){pwdAff[i] = ' ';}
+      pwdAff[9] = '\0';
+      keyboardInput(pwdBuf, PWD_MAX_LENGTH + 1, "Enter your password.");
+      for(int i=0; i<9; i++){pwdAff[i] = '.';}
+      pwdAff[9] = '\0';
+      break;
+      case NO_INPUT: break;
+      default: break;
+    }
+    input = false;
+    curX = 0;
+    curY = 0;
+  }
 }
 
 void ConnectionPage::draw(){
@@ -75,17 +134,31 @@ void ConnectionPage::draw(){
   message("Welcome to M2V ! Please enter \nyour username and your password.");
 
   C2D_SceneBegin(bottom);
-  //C2D_DrawRectangle(20, BOTTOM_MAX_Y-100, 0, BOTTOM_MAX_X-40, 80, clrBox, clrBox, clrBox, clrBox);
-  //C2D_DrawRectangle(20, BOTTOM_MAX_Y-100, 0, BOTTOM_MAX_X-40, 80, clrBox, clrBox, clrBox, clrBox);
   C2D_TargetClear(bottom, clrClear);
   C2D_DrawRectangle(160, 40, 0, 120, 45, clrBox, clrBox, clrBox, clrBox);
   C2D_DrawRectangle(160, 105, 0, 120, 45, clrBox, clrBox, clrBox, clrBox);
   C2D_DrawRectangle(40, 170, 0, 240, 55, clrBox2, clrBox2, clrBox2, clrBox2);
   textWrite("Username : ", 40, 50, 0.8f, 0.8f, clrText);
   textWrite("Password : ", 40, 115, 0.8f, 0.8f, clrText);
+  textWrite(nameAff, 165, 53, 0.75f, 0.75f, clrClear);
+  textWrite(pwdAff, 180, 107, 1.0f, 1.0f, clrClear);
   textWrite("CONNECT TO M2V", 65, 185, 0.85f, 0.85f, clrClear);
   C3D_FrameEnd(0);
 }
 
+ButtonInput ConnectionPage::checkButtonInput() const{
+  ButtonInput button = NO_INPUT;
+  if(curX >= 160 && curX <= 280){
+    if(curY >= 40 && curY <= 85){
+      button = USERNAME_INPUT;
+    }
+  }
+  if(curX >= 160 && curX <= 280){
+    if(curY >= 105 && curY <= 150){
+      button = PASSWORD_INPUT;
+    }
+  }
+  return button;
+}
 
 //=====================================================================================================

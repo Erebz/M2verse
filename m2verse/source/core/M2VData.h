@@ -28,6 +28,12 @@ enum Pages : int{
   PROFILE_PAGE
 };
 
+enum ButtonInput : int{
+  NO_INPUT = 0,
+  PASSWORD_INPUT,
+  USERNAME_INPUT
+};
+
 struct User{
   //char username[USERNAME_MAX_LENGTH];
   char * username;
