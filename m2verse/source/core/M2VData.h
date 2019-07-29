@@ -31,7 +31,8 @@ enum Pages : int{
 enum ButtonInput : int{
   NO_INPUT = 0,
   PASSWORD_INPUT,
-  USERNAME_INPUT
+  USERNAME_INPUT,
+  CONNECTION_INPUT
 };
 
 struct User{

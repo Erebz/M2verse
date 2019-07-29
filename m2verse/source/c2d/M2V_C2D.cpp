@@ -63,9 +63,7 @@ void M2V_C2D::changePage(){
       this->currentPage = new ConnectionPage(this->top, this->bottom);
     break;
     case CONNECTION_VALID:
-      user.username = "Yaya";
-      user.connected = true;
-      user.region = EUR;
+      user = ((ConnectionPage*) this->currentPage)->getUser();
       this->page = PROFILE_PAGE;
       this->currentPage = new ProfilePage(this->user, this->top, this->bottom);
     break;

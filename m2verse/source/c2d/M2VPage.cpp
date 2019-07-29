@@ -39,7 +39,7 @@ void M2VPage::keyboardInput(char * buffer, unsigned int max, const char * hint){
   char * result = new char[max];
   button = swkbdInputText(&swkbd, result, max);
 
-  if(button & SWKBD_BUTTON_RIGHT && result[0] != '\0'){
+  if(button & SWKBD_BUTTON_RIGHT){
     for(unsigned int i=0; i < strlen(result); i++){
       buffer[i] = result[i];
     }
@@ -88,6 +88,11 @@ void ConnectionPage::update(){
   if(touch.px > 0 && touch.py > 0){
     curX = touch.px;
     curY = touch.py;
+    if(checkButtonInput() == CONNECTION_INPUT){
+      connexionButtonHighlight = true;
+    }else{
+      connexionButtonHighlight = false;
+    }
   }
   if(touch.px == 0 && touch.py == 0){
     if(curX != 0 && curY != 0){
@@ -100,7 +105,7 @@ void ConnectionPage::update(){
       for(int i=0; i<10; i++){nameAff[i] = ' ';}
       nameAff[9] = '\0';
       keyboardInput(nameBuf, USERNAME_MAX_LENGTH + 1, "Enter your username.");
-      for(int i=0; (i<10 && i<strlen(nameBuf)); i++){
+      for(unsigned int i=0; (i<10 && i<strlen(nameBuf)); i++){
         nameAff[i] = nameBuf[i];
       }
       if(strlen(nameBuf) >= 10){
@@ -114,8 +119,15 @@ void ConnectionPage::update(){
       for(int i=0; i<10; i++){pwdAff[i] = ' ';}
       pwdAff[9] = '\0';
       keyboardInput(pwdBuf, PWD_MAX_LENGTH + 1, "Enter your password.");
-      for(int i=0; i<9; i++){pwdAff[i] = '.';}
-      pwdAff[9] = '\0';
+      if(pwdBuf[0] != '\0') {
+        for(int i=0; i<9; i++){pwdAff[i] = '.';}
+        pwdAff[9] = '\0';
+      }
+      break;
+      case CONNECTION_INPUT:
+      connexionButtonHighlight = false;
+      //test if entries are correct
+      //connection request
       break;
       case NO_INPUT: break;
       default: break;
@@ -137,12 +149,19 @@ void ConnectionPage::draw(){
   C2D_TargetClear(bottom, clrClear);
   C2D_DrawRectangle(160, 40, 0, 120, 45, clrBox, clrBox, clrBox, clrBox);
   C2D_DrawRectangle(160, 105, 0, 120, 45, clrBox, clrBox, clrBox, clrBox);
-  C2D_DrawRectangle(40, 170, 0, 240, 55, clrBox2, clrBox2, clrBox2, clrBox2);
   textWrite("Username : ", 40, 50, 0.8f, 0.8f, clrText);
   textWrite("Password : ", 40, 115, 0.8f, 0.8f, clrText);
   textWrite(nameAff, 165, 53, 0.75f, 0.75f, clrClear);
   textWrite(pwdAff, 180, 107, 1.0f, 1.0f, clrClear);
-  textWrite("CONNECT TO M2V", 65, 185, 0.85f, 0.85f, clrClear);
+  if(connexionButtonHighlight){
+    C2D_DrawRectangle(38, 168, 0, 244, 59, clrText, clrText, clrText, clrText);
+    C2D_DrawRectangle(40, 170, 0, 240, 55, clrBox2, clrBox2, clrBox, clrBox);
+    textWrite("CONNECT TO M2V", 65, 185, 0.85f, 0.85f, clrText);
+  }else{
+    C2D_DrawRectangle(40, 170, 0, 240, 55, clrBox2, clrBox2, clrBox2, clrBox2);
+    textWrite("CONNECT TO M2V", 65, 185, 0.85f, 0.85f, clrClear);
+  }
+
   C3D_FrameEnd(0);
 }
 
@@ -156,6 +175,11 @@ ButtonInput ConnectionPage::checkButtonInput() const{
   if(curX >= 160 && curX <= 280){
     if(curY >= 105 && curY <= 150){
       button = PASSWORD_INPUT;
+    }
+  }
+  if(curX >= 40 && curX <= 280){
+    if(curY >= 170 && curY <= 225){
+      button = CONNECTION_INPUT;
     }
   }
   return button;

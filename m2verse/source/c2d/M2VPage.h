@@ -66,7 +66,8 @@ private:
   char pwdBuf[PWD_MAX_LENGTH + 1];
   char nameAff[10];
   char pwdAff[10];
-  bool connectionValid = false;
+  bool connexionButtonHighlight = false, connectionValid = false;
+  User user;
 public:
   ConnectionPage();
   ConnectionPage(C3D_RenderTarget * top = NULL, C3D_RenderTarget * bottom = NULL) : M2VPage(top, bottom) {
@@ -74,6 +75,9 @@ public:
   }
   virtual ~ConnectionPage(){}
   Pages run();
+  User getUser(){
+    return this->user;
+  }
 };
 
 
