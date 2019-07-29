@@ -9,4 +9,4 @@ A "Miiverse 2" homebrew project made with devkitARM and **Citro2D**.
 
 
 
-Author of **sources/** : Yacine HAMDI (Erebz Bobow)
+Author of **sources/** : Yacine HAMDI (Erebz Bobow) & Justin GROSJEAN (Justin-Gr)
