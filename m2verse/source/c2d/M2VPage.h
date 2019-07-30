@@ -20,7 +20,7 @@ protected:
   u32 clrGreen = C2D_Color32(0x83, 0xEC, 0x8A, 0xFF);
   u32 clrBlue  = C2D_Color32(0x00, 0x00, 0xFF, 0xFF);
   u32 clrClear = C2D_Color32(0x04, 0x2D, 0x30, 0xFF);
-  u32 clrWhite = C2D_Color32(0x00, 0x00, 0x00, 0xFF);
+  u32 clrWhite = C2D_Color32(0xFF, 0xFF, 0xFF, 0xFF);
   u32 clrBox = C2D_Color32(0x09, 0x5A, 0x60, 0xC8);
   u32 clrBox2 = C2D_Color32(0x84, 0xAC, 0xAF, 0xC8);
   u32 clrText = C2D_Color32(0x8B, 0x8F, 0x52, 0xFF);
@@ -38,6 +38,7 @@ protected:
   void question();
   virtual ButtonInput checkButtonInput() const = 0;
   void keyboardInput(char * buffer, unsigned int max, const char * hint);
+  touchPosition touch;
   unsigned int curX = 0, curY = 0;
   bool input = false;
 

@@ -9,17 +9,18 @@ M2V_C2D::M2V_C2D(){
 M2V_C2D::~M2V_C2D(){
   if(this->currentPage != NULL) delete this->currentPage;
   this->currentPage = NULL;
-  if(this->top != NULL) delete this->top;
+/*  if(this->top != NULL) delete this->top;
   this->top = NULL;
   if(this->bottom != NULL) delete this->bottom;
-  this->bottom = NULL;
+  this->bottom = NULL; */
 }
 
 void M2V_C2D::init(){
   romfsInit();
   gfxInitDefault();
   C3D_Init(C3D_DEFAULT_CMDBUF_SIZE);
-  C2D_Init(C2D_DEFAULT_MAX_OBJECTS);
+  //C2D_Init(C2D_DEFAULT_MAX_OBJECTS);
+  C2D_Init(64050);
   C2D_Prepare();
 
   this->top = C2D_CreateScreenTarget(GFX_TOP, GFX_LEFT);
@@ -46,6 +47,7 @@ void M2V_C2D::run(){
     if (kDown & KEY_START) break;
 
     Pages page = this->currentPage->run();
+
     gspWaitForVBlank();
     if(this->page != page){
       this->page = page;
@@ -69,6 +71,9 @@ void M2V_C2D::changePage(){
     break;
     case PROFILE_PAGE:
       this->currentPage = new ProfilePage(this->user, this->top, this->bottom);
+    break;
+    case DRAWING_PAGE:
+      this->currentPage = new DrawingPage(this->top, this->bottom);
     break;
     default:
     break;

@@ -5,6 +5,7 @@
 #include "../core/M2VData.h"
 #include "M2VPage.h"
 #include "ProfilePage.h"
+#include "DrawingPage.h"
 #include <citro2d.h>
 
 class M2V_C2D{

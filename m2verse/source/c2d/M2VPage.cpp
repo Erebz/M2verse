@@ -59,7 +59,7 @@ Pages ConnectionPage::run(){
   this->draw();
 
   if(connectionValid){
-    return PROFILE_PAGE;
+    return DRAWING_PAGE;
   }else{
     return CONNECTION_PAGE;
   }
@@ -83,7 +83,6 @@ void ConnectionPage::update(){
   if(kDown & KEY_A) connectionValid = true;
 
   //Read the touch screen coordinates
-  touchPosition touch;
   hidTouchRead(&touch);
   if(touch.px > 0 && touch.py > 0){
     curX = touch.px;
