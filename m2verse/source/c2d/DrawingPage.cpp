@@ -31,17 +31,21 @@ void DrawingPage::init(){
   }
 }
 
-void DrawingPage::drawPixel(){
+void DrawingPage::drawPixel(unsigned int x, unsigned int y){
   switch (tool) {
     case PEN_1:
-      drawing[curX][curY-20] = drawColor;
-      if(curX < DRAW_MAX_X-1) drawing[curX+1][curY-20] = drawColor;
-      if(curX > 0) drawing[curX-1][curY-20] = drawColor;
-      if(curY-20 < DRAW_MAX_Y-1) drawing[curX][curY-19] = drawColor;
-      if(curY > 0) drawing[curX][curY-21] = drawColor;
+      drawing[x][y-20] = drawColor;
+      if(x < DRAW_MAX_X-1) drawing[x+1][y-20] = drawColor;
+      if(x > 0) drawing[x-1][y-20] = drawColor;
+      if(y-20 < DRAW_MAX_Y-1) drawing[x][y-19] = drawColor;
+      if(y > 0) drawing[x][y-21] = drawColor;
     break;
     default: break;
   }
+}
+
+void DrawingPage::drawLine(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2){
+  drawPixel((x1+x2)/2, (y1+y2)/2);
 }
 
 void DrawingPage::update(){
@@ -58,7 +62,12 @@ void DrawingPage::update(){
     curY = touch.py;
     switch (checkButtonInput()){
       case DRAW_INPUT:
-        drawPixel();
+      if(curX2 != 0 && curY2 != 0){
+        //drawLine(curX2, curY2, curX, curY);
+      }
+        drawPixel(curX, curY);
+        curX2 = curX;
+        curY2 = curY;
       break;
       default: break;
     }
@@ -77,6 +86,8 @@ void DrawingPage::update(){
     input = false;
     curX = 0;
     curY = 0;
+    curX2 = 0;
+    curY2 = 0;
   }
 }
 
