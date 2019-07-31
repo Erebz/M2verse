@@ -34,18 +34,30 @@ void DrawingPage::init(){
 void DrawingPage::drawPixel(unsigned int x, unsigned int y){
   switch (tool) {
     case PEN_1:
-      drawing[x][y] = drawColor;
-      if(x < DRAW_MAX_X-1) drawing[x+1][y] = drawColor;
-      if(x > 0) drawing[x-1][y] = drawColor;
-      if(y-20 < DRAW_MAX_Y-1) drawing[x][y+1] = drawColor;
-      if(y > 0) drawing[x][y-1] = drawColor;
+    drawing[x][y] = drawColor;
+    if(x < DRAW_MAX_X-1) drawing[x+1][y] = drawColor;
+    if(x > 0) drawing[x-1][y] = drawColor;
+    if(y-20 < DRAW_MAX_Y-1) drawing[x][y+1] = drawColor;
+    if(y > 0) drawing[x][y-1] = drawColor;
     break;
     default: break;
   }
 }
 
 void DrawingPage::drawLine(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2){
-  drawPixel((x1+x2)/2, (y1+y2)/2);
+  for (unsigned int ratio = 0; ratio <= 100; ratio += 10) {
+    map(x1, y1, x2, y2, (float) ratio/100);
+  }
+}
+
+void DrawingPage::map(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2, float ratio) {
+  int vec_x = x2 - x1;
+  int vec_y = y2 - y1;
+
+  unsigned int pix_x = x1 + (int)(ratio*vec_x);
+  unsigned int pix_y = y1 + (int)(ratio*vec_y);
+
+  drawPixel(pix_x, pix_y);
 }
 
 void DrawingPage::update(){
@@ -65,9 +77,9 @@ void DrawingPage::update(){
       if(curX2 != 0 && curY2 != 0){
         drawLine(curX2, curY2-20, curX, curY-20);
       }
-        drawPixel(curX, curY-20);
-        curX2 = curX;
-        curY2 = curY;
+      drawPixel(curX, curY-20);
+      curX2 = curX;
+      curY2 = curY;
       break;
       default: break;
     }
