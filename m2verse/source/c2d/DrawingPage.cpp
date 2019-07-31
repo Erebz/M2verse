@@ -34,11 +34,11 @@ void DrawingPage::init(){
 void DrawingPage::drawPixel(unsigned int x, unsigned int y){
   switch (tool) {
     case PEN_1:
-      drawing[x][y-20] = drawColor;
-      if(x < DRAW_MAX_X-1) drawing[x+1][y-20] = drawColor;
-      if(x > 0) drawing[x-1][y-20] = drawColor;
-      if(y-20 < DRAW_MAX_Y-1) drawing[x][y-19] = drawColor;
-      if(y > 0) drawing[x][y-21] = drawColor;
+      drawing[x][y] = drawColor;
+      if(x < DRAW_MAX_X-1) drawing[x+1][y] = drawColor;
+      if(x > 0) drawing[x-1][y] = drawColor;
+      if(y-20 < DRAW_MAX_Y-1) drawing[x][y+1] = drawColor;
+      if(y > 0) drawing[x][y-1] = drawColor;
     break;
     default: break;
   }
@@ -63,9 +63,9 @@ void DrawingPage::update(){
     switch (checkButtonInput()){
       case DRAW_INPUT:
       if(curX2 != 0 && curY2 != 0){
-        //drawLine(curX2, curY2, curX, curY);
+        drawLine(curX2, curY2-20, curX, curY-20);
       }
-        drawPixel(curX, curY);
+        drawPixel(curX, curY-20);
         curX2 = curX;
         curY2 = curY;
       break;
