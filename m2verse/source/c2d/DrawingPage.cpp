@@ -38,8 +38,14 @@ void DrawingPage::drawPixel(unsigned int x, unsigned int y){
     drawing[x][y] = drawColor;
     if(x < DRAW_MAX_X-1) drawing[x+1][y] = drawColor;
     if(x > 0) drawing[x-1][y] = drawColor;
-    if(y-20 < DRAW_MAX_Y-1) drawing[x][y+1] = drawColor;
+    if(y < DRAW_MAX_Y-1) drawing[x][y+1] = drawColor;
     if(y > 0) drawing[x][y-1] = drawColor;
+
+    if(y > 0 && x > 0) drawing[x-1][y-1] = drawColor;
+    if(y > 0 && x < DRAW_MAX_X-1) drawing[x+1][y-1] = drawColor;
+    if(y < DRAW_MAX_Y-1 && x > 0) drawing[x-1][y+1] = drawColor;
+    if(y < DRAW_MAX_Y-1 && x < DRAW_MAX_X-1) drawing[x+1][y+1] = drawColor;
+
     break;
     default: break;
   }
