@@ -1,6 +1,7 @@
 #ifndef M2V_DATA_H
 #define M2V_DATA_H
 
+#include <citro2d.h>
 #define USERNAME_MAX_LENGTH 15
 #define PWD_MAX_LENGTH 15
 #define TITLE_MAX_LENGTH 30
@@ -34,7 +35,19 @@ enum ButtonInput : int{
   PASSWORD_INPUT,
   USERNAME_INPUT,
   CONNECTION_INPUT,
-  DRAW_INPUT
+  DRAW_INPUT,
+  CLEAR_INPUT,
+  UNDO_INPUT,
+  PEN_1_INPUT,
+  PEN_2_INPUT,
+  PEN_3_INPUT,
+  ERASER_1_INPUT,
+  ERASER_2_INPUT,
+  ERASER_3_INPUT,
+  BLACK_INPUT,
+  RED_INPUT,
+  GREEN_INPUT,
+  BLUE_INPUT,
 };
 
 enum DrawTools : int {
@@ -46,15 +59,13 @@ enum DrawTools : int {
   ERASER_3
 };
 
-/*enum Color : u32{
-  GREEN = C2D_Color32(0x83, 0xEC, 0x8A, 0xFF);
-  BLUE = C2D_Color32(0x00, 0x00, 0xFF, 0xFF);
-  u32 clrClear = C2D_Color32(0x04, 0x2D, 0x30, 0xFF);
-  u32 clrWhite = C2D_Color32(0x00, 0x00, 0x00, 0xFF);
-  u32 clrBox = C2D_Color32(0x09, 0x5A, 0x60, 0xC8);
-  u32 clrBox2 = C2D_Color32(0x84, 0xAC, 0xAF, 0xC8);
-  u32 clrText = C2D_Color32(0x8B, 0x8F, 0x52, 0xFF);
-};*/
+enum Color : u32{
+  RED = C2D_Color32(0xFF, 0x00, 0x00, 0xFF),
+  GREEN = C2D_Color32(0x00, 0xFF, 0x00, 0xFF),
+  BLUE = C2D_Color32(0x00, 0x00, 0xFF, 0xFF),
+  BLACK = C2D_Color32(0x00, 0x00, 0x00, 0xFF),
+  WHITE = C2D_Color32(0XFF, 0XFF, 0XFF, 0xFF)
+};
 
 struct User{
   //char username[USERNAME_MAX_LENGTH];

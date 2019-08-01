@@ -24,6 +24,7 @@ protected:
   u32 clrBox = C2D_Color32(0x09, 0x5A, 0x60, 0xC8);
   u32 clrBox2 = C2D_Color32(0x84, 0xAC, 0xAF, 0xC8);
   u32 clrText = C2D_Color32(0x8B, 0x8F, 0x52, 0xFF);
+  u32 clrButton1 = C2D_Color32(0x09, 0x5A, 0x60, 0x32);
   C2D_TextBuf g_staticBuf;
   C2D_Text g_staticText;
   C2D_SpriteSheet spriteSheet;

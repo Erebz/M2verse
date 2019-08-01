@@ -17,9 +17,10 @@ private:
   char title[TITLE_MAX_LENGTH + 1];
   u32 drawing[DRAW_MAX_X][DRAW_MAX_Y];
   DrawTools tool = PEN_1;
-  u32 drawColor = clrBlue;
+  u32 drawColor = BLACK;
   unsigned int curX2=0, curY2=0;
   ButtonInput checkButtonInput() const;
+  void clearDrawing();
   void drawPixel(unsigned int x, unsigned int y);
   void drawLine(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2);
   void map(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2, float ratio);

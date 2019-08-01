@@ -83,916 +83,915 @@
 00100f8c 0000002c T M2V_C2D::M2V_C2D()
 00100fb8 00000028 T M2V_C2D::~M2V_C2D()
 00100fb8 00000028 T M2V_C2D::~M2V_C2D()
-00100fe0 00000138 T M2V_C2D::init()
-00101118 00000040 T M2V_C2D::quit()
-00101158 000002f0 T M2V_C2D::changePage()
-00101448 00000080 T M2V_C2D::run()
-001014c8 0000002c T DrawingPage::run()
-001014f4 0000002c T DrawingPage::checkButtonInput() const
-00101520 000001cc t DrawingPage::drawPixel(unsigned int, unsigned int) [clone .part.0]
-001016ec 00000108 T DrawingPage::draw()
-001017f4 00000044 W DrawingPage::~DrawingPage()
-001017f4 00000044 W DrawingPage::~DrawingPage()
-00101838 0000004c W DrawingPage::~DrawingPage()
-00101884 000001dc T DrawingPage::init()
-00101a60 00000050 T DrawingPage::map(unsigned int, unsigned int, unsigned int, unsigned int, float)
-00101ab0 000000d0 T DrawingPage::drawLine(unsigned int, unsigned int, unsigned int, unsigned int)
-00101b80 00000190 T DrawingPage::update()
-00101d10 00000008 W ProfilePage::checkButtonInput() const
-00101d18 00000004 T ProfilePage::update()
-00101d1c 00000044 T ProfilePage::run()
-00101d60 000001dc T ProfilePage::draw()
-00101f3c 00000044 W ProfilePage::~ProfilePage()
-00101f3c 00000044 W ProfilePage::~ProfilePage()
-00101f80 0000004c W ProfilePage::~ProfilePage()
-00101fcc 000001ac T ProfilePage::init()
-00102178 00000034 T main
-001021ac 00000038 T ConnectionPage::run()
-001021e4 0000005c T ConnectionPage::checkButtonInput() const
-00102240 00000044 W ConnectionPage::~ConnectionPage()
-00102240 00000044 W ConnectionPage::~ConnectionPage()
-00102284 0000004c W ConnectionPage::~ConnectionPage()
-001022d0 0000007c T M2VPage::textWrite(char const*, float, float, float, float, unsigned long)
-0010234c 00000078 T M2VPage::message(char const*)
-001023c4 0000028c T ConnectionPage::draw()
-00102650 000000bc T M2VPage::strAdd(char const*, char const*) const
-0010270c 000000d0 T M2VPage::keyboardInput(char*, unsigned int, char const*)
-001027dc 00000220 T ConnectionPage::update()
-001029fc 000001ac T ConnectionPage::init()
-00102ba8 00000330 T C2D_Init
-00102ed8 00000044 T C2D_Fini
-00102f1c 000000c8 T C2D_Prepare
-00102fe4 0000010c T C2D_SceneSize
-001030f0 00000044 T C2D_CreateScreenTarget
-00103134 0000013c T C2Di_CalcQuad
-00103270 00000040 T C2Di_AppendVtx
-001032b0 00000030 T C2Di_FlushVtxBuf
-001032e0 00000020 t C2Di_FrameEndHook
-00103300 00000018 T C2D_Flush
-00103318 00000030 T C2D_TargetClear
-00103348 00000210 T C2Di_Update
-00103558 000002ec T C2D_DrawImage
-00103844 0000019c T C2D_DrawRectangle
-001039e0 00000018 t C2Di_GlyphComp
-001039f8 000001c8 T C2D_TextBufNew
-00103bc0 00000004 T C2D_TextBufDelete
-00103bc4 0000000c T C2D_TextBufClear
-00103bd0 00000198 T C2D_TextFontParseLine
-00103d68 00000090 T C2D_TextFontParse
-00103df8 00000014 T C2D_TextParse
-00103e0c 0000002c T C2D_TextOptimize
-00103e38 0000034c T C2D_DrawText
-00104184 0000006c T C2D_SpriteSheetLoadFromHandle
-001041f0 00000034 T C2D_SpriteSheetLoad
-00104224 00000028 T C2D_SpriteSheetFree
-0010424c 00000008 T C2D_SpriteSheetCount
-00104254 00000028 T C2D_SpriteSheetGetImage
-0010427c 00000044 T C2D_FontGlyphIndexFromCodePoint
-001042c0 00000078 T C2D_FontCalcGlyphPos
-00104338 000000c4 t C3Di_SplitFrame.part.1
-001043fc 00000004 W C3Di_LightEnvUpdate
-00104400 00000004 W C3Di_LightEnvDirty
-00104404 000000ac t C3Di_AptEventHook
-001044b0 00000004 W C3Di_GasUpdate
-001044b4 0000021c T C3D_Init
-001046d0 00000098 T C3D_SetViewport
-00104768 0000050c T C3Di_UpdateContext
-00104c74 00000020 T C3Di_SplitFrame
-00104c94 00000064 T C3D_Fini
-00104cf8 00000114 T C3D_BindProgram
-00104e0c 00000054 t C3Di_RenderQueueInit
-00104e60 00000080 t C3Di_RenderTargetDestroy
-00104ee0 000000ac t onVBlank1
-00104f8c 0000013c t onVBlank0
-001050c8 0000000c t C3Di_RenderTargetNew
-001050d4 0000007c t C3Di_WaitAndClearQueue
-00105150 000000c0 t onQueueFinish
-00105210 00000044 t C3D_FrameSplit.part.6
-00105254 00000030 T C3D_FrameSync
-00105284 000000a0 T C3Di_RenderQueueExit
-00105324 00000020 T C3Di_RenderQueueWaitDone
-00105344 0000007c T C3D_FrameBegin
-001053c0 00000048 T C3D_FrameDrawOn
-00105408 00000018 T C3D_FrameSplit
-00105420 00000164 T C3D_FrameEnd
-00105584 0000001c T C3D_FrameEndHook
-001055a0 0000017c T C3D_RenderTargetCreate
-0010571c 0000004c T C3D_RenderTargetSetOutput
-00105768 000000b4 T C3D_SyncTextureCopy
-0010581c 00000284 T C3D_TexInitWithParams
-00105aa0 000000dc T C3D_TexLoadImage
-00105b7c 00000048 T C3D_TexBind
-00105bc4 0000007c T C3D_TexDelete
-00105c40 00000174 T C3Di_SetTex
-00105db4 000003e8 t Tex3DSi_ImportCommon
-0010619c 00000034 T Tex3DS_TextureImportStdio
-001061d0 00000008 T Tex3DS_GetNumSubTextures
-001061d8 0000001c T Tex3DS_GetSubTexture
-001061f4 00000004 T Tex3DS_TextureFree
-001061f8 0000001c T C3D_CalcColorBufSize
-00106214 0000001c T C3D_CalcDepthBufSize
-00106230 00000044 T C3D_SetFrameBuf
-00106274 00000168 T C3Di_FrameBufBind
-001063dc 000000c8 T C3D_FrameBufClear
-001064a4 00000048 T C3D_FrameBufTransfer
-001064ec 00000034 T C3D_GetTexEnv
-00106520 00000024 T C3Di_TexEnvBind
-00106544 0000006c T C3D_ProcTexInit
-001065b0 00000050 T C3D_ProcTexBind
-00106600 00000060 T C3D_ProcTexLutBind
-00106660 000000a4 T ProcTexLut_FromArray
-00106704 00000174 T C3Di_ProcTexUpdate
-00106878 00000068 T C3Di_ProcTexDirty
-001068e0 00000024 T BufInfo_Init
-00106904 00000084 T BufInfo_Add
-00106988 00000040 T C3D_SetBufInfo
-001069c8 00000048 T C3Di_BufInfoBind
-00106a10 00000148 T C3D_DrawArrays
-00106b58 00000040 T C3D_DepthMap
-00106b98 0000001c T C3D_CullFace
-00106bb4 00000040 T C3D_StencilTest
-00106bf4 00000024 T C3D_StencilOp
-00106c18 0000001c T C3D_BlendingColor
-00106c34 00000024 T C3D_EarlyDepthTest
-00106c58 0000002c T C3D_DepthTest
-00106c84 0000002c T C3D_AlphaTest
-00106cb0 00000050 T C3D_AlphaBlend
-00106d00 00000030 T C3D_FragOpMode
-00106d30 00000044 T C3D_FragOpShadow
-00106d74 000001ac T C3Di_EffectBind
-00106f20 00000028 T AttrInfo_Init
-00106f48 000000a0 T AttrInfo_AddLoader
-00106fe8 00000054 T C3D_SetAttrInfo
-0010703c 00000080 T C3Di_AttrInfoBind
-001070bc 000000a4 T C3D_ImmSendAttrib
-00107160 000002b8 T C3D_UpdateUniforms
-00107418 000000c0 T C3Di_DirtyUniforms
-001074d8 000000e0 T C3Di_LoadShaderUniforms
-001075b8 00000028 T C3Di_ClearShaderUniforms
-001075e0 000000cc T Mtx_Ortho
-001076ac 000000cc T Mtx_OrthoTilt
-00107778 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
-0010779c 00000004 t addrMapNodeDestructor(rbtree_node*)
-001077a0 00000114 T vramMemAlign
-001078b4 00000008 T vramAlloc
-001078bc 00000054 T vramFree
-00107910 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
-00107934 00000004 t addrMapNodeDestructor(rbtree_node*)
-00107938 00000124 T linearMemAlign
-00107a5c 00000008 T linearAlloc
-00107a64 00000054 T linearFree
-00107ab8 0000008c T MemPool::CoalesceRight(MemBlock*)
-00107b44 00000174 T MemPool::Allocate(MemChunk&, unsigned long, int)
-00107cb8 000000fc T MemPool::Deallocate(MemChunk const&)
-00107db4 00000008 t romfs_close
-00107dbc 000000d4 t romfs_seek
-00107e90 00000024 t romfs_dirreset
-00107eb4 00000078 t romfs_fstat
-00107f2c 00000054 t _romfs_read_chk
-00107f80 000000cc t romfs_read
-0010804c 0000007c t romfs_free
-001080c8 0000016c t romfsMountCommon
-00108234 00000254 t romfs_dirnext
-00108488 000000bc t romfsInitMtime.isra.0
-00108544 000000b4 t searchForFile.constprop.0
-001085f8 000000b8 t searchForDir.constprop.0
-001086b0 000001c4 t navigateToDir.constprop.0
-00108874 0000011c t romfs_open
-00108990 00000204 t romfs_stat
-00108b94 00000054 t romfs_chdir
-00108be8 00000078 t romfs_diropen
-00108c60 00000008 t romfs_dirclose
-00108c68 00000344 T romfsMount
-00108fac 00000078 T romfsUnmount
-00109024 00000058 t getSysTime
-0010907c 00000028 t __ctru_speedup_config.part.0
-001090a4 0000004c T osConvertVirtToPhys
-001090f0 00000024 T osGetMemRegionUsed
-00109118 00000128 T __libctru_gtod
-00109240 00000018 T __ctru_speedup_config
-00109258 0000009c T fontEnsureMapped
-001092f4 00000134 T fontGlyphIndexFromCodePoint
-00109428 0000006c T fontGetCharWidthInfo
-00109494 000001c0 T fontCalcGlyphPos
-00109654 0000008c t gfxSetFramebufferInfo.part.0
-001096e0 0000006c t gfxSetFramebufferInfo
-0010974c 00000058 t gfxGetFramebuffer.part.0
-001097a4 00000010 T gfxIs3D
-001097b4 00000018 T __get_bytes_per_pixel
-001097cc 00000184 T gfxSetScreenFormat
-00109950 00000214 T gfxInit
-00109b64 00000010 T gfxInitDefault
-00109b74 000000e0 T gfxExit
-00109c54 00000064 T gfxGetFramebuffer
-00109cb8 000000f4 T gfxConfigScreen
-00109dac 000001f0 T shaderInstanceInit
-00109f9c 00000034 T shaderInstanceFree
-00109fd0 00000018 T shaderInstanceGetUniformLocation
-00109fe8 00000018 T shaderProgramInit
-0010a000 0000002c T shaderProgramFree
-0010a02c 0000006c T shaderProgramSetVsh
-0010a098 000008b4 T shaderProgramConfigure
-0010a94c 000001f8 t DVLE_GenerateOutmap.part.0
-0010ab44 000001c8 T DVLB_ParseFile
-0010ad0c 00000038 T DVLB_Free
-0010ad44 00000078 T DVLE_GetUniformRegister
-0010adbc 00000038 t submitGxCommand
-0010adf4 00000010 T GX_BindQueue
-0010ae04 00000050 T GX_ProcessCommandList
-0010ae54 00000054 T GX_MemoryFill
-0010aea8 00000048 T GX_DisplayTransfer
-0010aef0 0000004c T GX_TextureCopy
-0010af3c 00000074 t gxCmdQueueDoCommands.part.0
-0010afb0 000000c8 T gxCmdQueueInterrupt
-0010b078 0000004c T gxCmdQueueClear
-0010b0c4 000000f8 T gxCmdQueueAdd
-0010b1bc 00000080 T gxCmdQueueRun
-0010b23c 00000060 T gxCmdQueueStop
-0010b29c 00000084 T gxCmdQueueWait
-0010b320 0000013c T GPUCMD_Add
-0010b45c 000000b0 T GPUCMD_Split
-0010b50c 00000040 T f32tof16
-0010b54c 00000040 T f32tof24
-0010b58c 00000044 T f32tof31
-0010b5d0 00000074 T gspInit
-0010b644 0000003c T gspExit
-0010b680 00000034 T gspSetEventCallback
-0010b6b4 000000a4 T gspInitEventHandler
-0010b758 00000040 T gspExitEventHandler
-0010b798 00000050 T gspWaitForEvent
-0010b7e8 00000064 T gspWaitForAnyEvent
-0010b84c 00000178 t gspEventThreadMain
-0010b9c4 00000124 T gspSubmitGxCommand
-0010bae8 0000006c T GSPGPU_SetBufferSwap
-0010bb54 0000004c T GSPGPU_FlushDataCache
-0010bba0 00000034 T GSPGPU_SetLcdForceBlack
-0010bbd4 00000064 T GSPGPU_RegisterInterruptRelayQueue
-0010bc38 0000002c T GSPGPU_UnregisterInterruptRelayQueue
-0010bc64 00000048 T GSPGPU_AcquireRight
-0010bcac 0000002c T GSPGPU_ReleaseRight
-0010bcd8 00000080 T GSPGPU_ImportDisplayCaptureInfo
-0010bd58 0000002c T GSPGPU_SaveVramSysArea
-0010bd84 0000002c T GSPGPU_RestoreVramSysArea
-0010bdb0 00000004 W _aptDebug
-0010bdb4 00000170 T aptSendCommand
-0010bf24 0000003c t aptExitProcess
-0010bf60 00000030 T aptHook
-0010bf90 00000030 T aptUnhook
-0010bfc0 0000001c T aptSetMessageCallback
-0010bfdc 00000050 T APT_InquireNotification
-0010c02c 00000194 t aptEventHandler
-0010c1c0 00000074 T APT_AppletUtility
-0010c234 000000b0 T aptSetSleepAllowed
-0010c2e4 000000b4 T APT_GlanceParameter
-0010c398 000000c8 T APT_ReceiveParameter
-0010c460 000000bc t aptReceiveParameter.constprop.0
-0010c520 000001e0 t aptScreenTransfer
-0010c700 00000210 t aptWaitForWakeUp
-0010c910 00000058 T APT_SendParameter
-0010c968 00000070 T APT_CancelParameter
-0010c9d8 0000025c T aptInit
-0010cc34 00000088 t aptClearParamQueue
-0010ccbc 00000264 T aptMainLoop
-0010cf20 00000254 T aptExit
-0010d174 000000dc T aptLaunchLibraryApplet
-0010d250 0000007c T APT_CheckNew3DS
-0010d2cc 00000048 T APT_GetSharedFont
-0010d314 00000028 t hidCheckSectionUpdateTime.part.0
-0010d33c 000000d0 T hidExit
-0010d40c 000001d8 T hidScanInput
-0010d5e4 00000010 T hidKeysDown
-0010d5f4 00000018 T hidTouchRead
-0010d60c 00000090 T HIDUSER_GetHandles
-0010d69c 000001a4 T hidInit
-0010d840 00000074 T ptmSysmInit
-0010d8b4 0000003c T ptmSysmExit
-0010d8f0 00000034 T PTMSYSM_ConfigureNew3DSCPU
-0010d924 00000028 t fsSessionForArchive.part.0
-0010d94c 000000c4 T fsInit
-0010da10 0000003c T fsExit
-0010da4c 00000064 T fsExemptFromSession
-0010dab0 0000005c T fsUnexemptFromSession
-0010db0c 000000bc T FSUSER_OpenFile
-0010dbc8 000000d4 T FSUSER_OpenFileDirectly
-0010dc9c 000000ac T FSUSER_DeleteFile
-0010dd48 000000e8 T FSUSER_RenameFile
-0010de30 000000ac T FSUSER_DeleteDirectory
-0010dedc 000000c4 T FSUSER_CreateFile
-0010dfa0 000000b4 T FSUSER_CreateDirectory
-0010e054 000000e8 T FSUSER_RenameDirectory
-0010e13c 000000a0 T FSUSER_OpenDirectory
-0010e1dc 00000098 T FSUSER_OpenArchive
-0010e274 000000a0 T FSUSER_ControlArchive
-0010e314 00000078 T FSUSER_CloseArchive
-0010e38c 00000078 T FSUSER_GetSdmcArchiveResource
-0010e404 00000064 T FSUSER_IsSdmcWritable
-0010e468 0000005c T FSFILE_Read
-0010e4c4 00000064 T FSFILE_Write
-0010e528 00000038 T FSFILE_GetSize
-0010e560 00000028 T FSFILE_SetSize
-0010e588 0000003c T FSFILE_Close
-0010e5c4 00000024 T FSFILE_Flush
-0010e5e8 00000054 T FSDIR_Read
-0010e63c 0000003c T FSDIR_Close
-0010e678 00000028 t swkbdConvertToUTF16.part.0
-0010e6a0 00000168 t swkbdMessageCallback
-0010e808 00000078 T swkbdInit
-0010e880 0000002c T swkbdSetHintText
-0010e8ac 00000054 T swkbdSetButton
-0010e900 000003b4 T swkbdInputText
-0010ecb4 00000120 t iov_memmove
-0010edd4 000000cc t buffer_read
-0010eea0 000000d8 t iov_read
-0010ef78 000001c4 t decompress_rle
-0010f13c 00000268 t decompress_lzss
-0010f3a4 000002ec t decompress_huff.isra.0.part.0
-0010f690 00000440 t decompress_lz11
-0010fad0 00000010 T decompressCallback_Stdio
-0010fae0 000000e8 T decompressHeader
-0010fbc8 0000023c T decompressV
-0010fe04 00000014 T rbtree_init
-0010fe18 000001a4 t do_insert
-0010ffbc 00000008 T rbtree_insert
-0010ffc4 00000090 T rbtree_rotate
-00110054 00000334 T rbtree_remove
-00110388 00000074 T rbtree_find
-001103fc 000000e8 T utf16_to_utf8
-001104e4 00000060 T decode_utf16
-00110544 00000138 T decode_utf8
-0011067c 000000c0 T utf8_to_utf16
-0011073c 00000038 W __libctru_init
-00110774 00000034 t __libctru_nanosleep
-001107a8 00000030 t __ctru_get_reent
-001107d8 000000fc T __system_initSyscalls
-001108d4 00000100 W __system_allocateHeaps
-001109d4 000000f0 T __system_initArgv
-00110ac4 T svcControlMemory
-00110ae4 T svcExitProcess
-00110aec T svcCreateThread
-00110b0c T svcExitThread
-00110b14 T svcSleepThread
-00110b1c T svcReleaseMutex
-00110b24 T svcCreateEvent
-00110b38 T svcSignalEvent
-00110b40 T svcClearEvent
-00110b48 T svcCreateMemoryBlock
-00110b60 T svcMapMemoryBlock
-00110b68 T svcUnmapMemoryBlock
-00110b70 T svcCreateAddressArbiter
-00110b84 T svcArbitrateAddress
-00110b9c T svcCloseHandle
-00110ba4 T svcWaitSynchronization
-00110bac T svcWaitSynchronizationN
-00110bd4 T svcDuplicateHandle
-00110be8 T svcGetSystemTick
-00110bf0 T svcGetSystemInfo
-00110c08 T svcConnectToPort
-00110c1c T svcSendSyncRequest
-00110c24 T svcBreak
-00110c2c 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
-00110c50 00000004 t addrMapNodeDestructor(rbtree_node*)
-00110c54 000000e8 T mappableAlloc
-00110d3c 00000054 T mappableFree
-00110d90 00000038 t LightLock_Unlock.part.0
-00110dc8 0000000c T __sync_init
-00110dd4 00000018 T __sync_fini
-00110dec 00000010 T __sync_get_arbiter
-00110dfc 00000018 T LightLock_Init
-00110e14 00000090 T LightLock_Lock
-00110ea4 00000034 T LightLock_TryLock
-00110ed8 00000020 T LightLock_Unlock
-00110ef8 00000024 T RecursiveLock_Init
-00110f1c 00000030 T RecursiveLock_Lock
-00110f4c 00000058 T RecursiveLock_TryLock
-00110fa4 00000038 T RecursiveLock_Unlock
-00110fdc 00000038 T LightEvent_Init
-00111014 0000007c T LightEvent_Clear
-00111090 000000dc T LightEvent_Signal
-0011116c 000000c0 T LightEvent_Wait
-0011122c 00000084 T envGetHandle
-001112b0 0000004c T envDestroyHandles
-001112fc 00000058 T srvExit
-00111354 00000038 T srvRegisterClient
-0011138c 000000cc T srvInit
-00111458 00000080 T srvGetServiceHandleDirect
-001114d8 00000048 T srvGetServiceHandle
-00111520 0000001c t threadFree.part.0
-0011153c 00000180 T threadCreate
-001116bc 00000024 T threadJoin
-001116e0 00000068 T threadExit
-00111748 00000048 t _thread_begin
-00111790 000000ac T irrstScanInput
-0011183c 00000024 T irrstKeysHeld
-00111860 00000050 T IRRST_GetHandles
-001118b0 00000154 T irrstInit
-00111a04 0000002c T IRRST_Shutdown
-00111a30 000000ac T irrstExit
-00111adc 0000000c T srvPmGetSessionHandle
-00111ae8 00000050 T rbtree_node_next
-00111b38 00000068 T encode_utf16
-00111ba0 00000104 T encode_utf8
-00111ca4 0000001c W __appInit
-00111cc0 0000001c W __appExit
-00111cdc 000000a0 W __libctru_exit
-00111d7c 00000014 t sdmc_link
-00111d90 00000014 t sdmc_dirreset
-00111da4 00000014 t sdmc_chmod
-00111db8 00000024 t error_cmp
-00111ddc 00000050 t sdmc_translate_error
-00111e2c 00000034 t sdmc_fsync
-00111e60 00000054 t sdmc_ftruncate
-00111eb4 000000bc t sdmc_statvfs
-00111f70 00000038 t sdmc_dirclose
-00111fa8 0000013c t sdmc_dirnext
-001120e4 00000034 t sdmc_close
-00112118 00000070 t sdmc_fstat
-00112188 000000d4 t sdmc_seek
-0011225c 00000078 t sdmc_read
-001122d4 000000ac t sdmc_write
-00112380 000001b0 t sdmc_utf16path
-00112530 00000074 t sdmc_rmdir
-001125a4 000000a4 t sdmc_diropen
-00112648 000000ac t sdmc_chdir
-001126f4 00000098 t sdmc_mkdir
-0011278c 00000108 t sdmc_rename
-00112894 00000074 t sdmc_unlink
-00112908 00000108 t sdmc_stat
-00112a10 00000198 t sdmc_open
-00112ba8 00000014 t sdmc_fchmod
-00112bbc 00000168 T sdmcInit
-00112d24 00000060 T sdmcExit
-00112d84 T __aeabi_read_tp
-00112d90 00000004 T operator delete(void*)
-00112d94 00000004 T operator delete[](void*)
-00112d98 0000005c T operator new(unsigned int)
-00112df4 00000004 T operator new[](unsigned int)
-00112df8 00000008 T __cxa_pure_virtual
-00112e00 0000000c T std::bad_alloc::what() const
-00112e0c 00000020 T std::bad_alloc::~bad_alloc()
-00112e0c 00000020 T std::bad_alloc::~bad_alloc()
-00112e2c 0000002c T std::bad_alloc::~bad_alloc()
-00112e58 00000004 T operator delete(void*, unsigned int)
-00112e5c 000000d4 t (anonymous namespace)::pool::free(void*) [clone .constprop.0]
-00112f30 00000090 t (anonymous namespace)::pool::allocate(unsigned int) [clone .constprop.0]
-00112fc0 00000044 T __cxa_allocate_exception
-00113004 00000030 T __cxa_free_exception
-00113034 00000040 t _GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv
-00113074 00000004 T std::exception::~exception()
-00113074 00000004 T std::exception::~exception()
-00113078 00000004 T std::bad_exception::~bad_exception()
-00113078 00000004 T std::bad_exception::~bad_exception()
-0011307c 0000000c T transaction clone for std::bad_exception::what() const
-0011307c 0000000c T std::bad_exception::what() const
-00113088 00000018 T std::bad_exception::~bad_exception()
-001130a0 00000038 T __cxxabiv1::__terminate(void (*)())
-001130d8 00000018 T std::terminate()
-001130f0 0000000c T __cxxabiv1::__unexpected(void (*)())
-001130fc 00000018 T std::unexpected()
-00113114 00000014 T std::get_terminate()
-00113128 00000014 T std::get_unexpected()
-0011313c 00000070 t __gxx_exception_cleanup(_Unwind_Reason_Code, _Unwind_Control_Block*)
-001131ac 00000070 T __cxa_init_primary_exception
-0011321c 00000058 T __cxa_throw
-00113274 000000b0 T __cxa_rethrow
-00113324 00000014 T std::get_new_handler()
-00113338 00000020 T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
-00113338 00000020 T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
-00113358 0000002c T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
-00113384 0000006c T __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
-001133f0 000000dc T __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
-001134cc 00000044 T __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
-00113510 00000004 T std::type_info::~type_info()
-00113510 00000004 T std::type_info::~type_info()
-00113514 00000008 T std::type_info::__is_pointer_p() const
-00113514 00000008 T std::type_info::__is_function_p() const
-0011351c 0000004c T std::type_info::operator==(std::type_info const&) const
-00113568 0000005c T __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
-001135c4 00000014 T __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
-001135d8 00000020 T __cxxabiv1::__class_type_info::~__class_type_info()
-001135d8 00000020 T __cxxabiv1::__class_type_info::~__class_type_info()
-001135f8 0000002c T __cxxabiv1::__class_type_info::~__class_type_info()
-00113624 00000068 T __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
-0011368c 0000002c T __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
-001136b8 00000044 T __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
-001136fc T __cxa_end_cleanup
-0011370c 00000138 T __cxa_type_match
-00113844 000000b4 T __cxa_begin_cleanup
-001138f8 000000b4 T __gnu_end_cleanup
-001139ac 00000070 t __cxxabiv1::__is_gxx_exception_class(char*)
-00113a1c 0000002c T __cxa_call_terminate
-00113a48 00000158 T __cxa_call_unexpected
-00113ba0 000000cc T __cxa_begin_catch
-00113c6c 000000e0 T __cxa_end_catch
-00113d4c 0000000c T __cxa_get_globals_fast
-00113d58 0000000c T __cxa_get_globals
-00113d64 00000168 t read_encoded_value_with_base(unsigned char, unsigned int, unsigned char const*, unsigned int*)
-00113ecc 00000064 t base_of_encoded_value(unsigned char, _Unwind_Context*)
-00113f30 000000d8 t parse_lsda_header(_Unwind_Context*, unsigned char const*, lsda_header_info*)
-00114008 00000700 T __gxx_personality_v0
-00114708 00000244 T cosf
-0011494c 00000024 t with_errnof
-00114970 0000001c T __math_invalidf
-0011498c 000000b4 T ceilf
-00114a40 0000026c T sinf
-00114cb0 000000f8 T sqrt
-00114da8 00000008 T __ieee754_sqrt
-00114db0 00000008 T matherr
-00114db8 00000038 T __aeabi_d2lz
-00114db8 00000038 T __fixdfdi
-00114df0 00000040 T __aeabi_d2ulz
-00114df0 00000040 T __fixunsdfdi
-00114e30 00000130 T __udivmoddi4
-00114f60 00000018 t selfrel_offset31
-00114f78 0000008c t search_EIT_table
-00115004 00000040 t __gnu_unwind_get_pr_addr
-00115044 00000114 t get_eit_entry
-00115158 00000088 t restore_non_core_regs
-001151e0 00000014 t _Unwind_decode_typeinfo_ptr.isra.0
-001151f4 00000004 t _Unwind_DebugHook
-001151f8 00000064 t unwind_phase2
-0011525c 00000134 t unwind_phase2_forced
-00115390 000000a4 T __gnu_Unwind_RaiseException
-00115434 00000024 T __gnu_Unwind_ForcedUnwind
-00115458 00000074 T __gnu_Unwind_Resume
-001154cc 00000020 T __gnu_Unwind_Resume_or_Rethrow
-001154ec 00000004 T _Unwind_Complete
-001154f0 00000018 T _Unwind_DeleteException
-00115508 00000064 T _Unwind_VRS_Get
-0011556c 0000002c t _Unwind_GetGR
-00115598 00000064 T _Unwind_VRS_Set
-001155fc 00000030 t _Unwind_SetGR
-0011562c 000000c0 T __gnu_Unwind_Backtrace
-001156ec 0000044c t __gnu_unwind_pr_common
-00115b38 00000008 T __aeabi_unwind_cpp_pr0
-00115b40 00000008 W __aeabi_unwind_cpp_pr1
-00115b48 00000008 W __aeabi_unwind_cpp_pr2
-00115b50 000003d0 T _Unwind_VRS_Pop
-00115f20 00000060 t next_unwind_byte
-00115f80 0000002c t _Unwind_GetGR.constprop.0
-00115fac 00000004 t unwind_UCB_from_context
-00115fb0 000003c8 T __gnu_unwind_execute
-00116378 00000044 T __gnu_unwind_frame
-001163bc 00000010 T _Unwind_GetRegionStart
-001163cc 0000001c T _Unwind_GetLanguageSpecificData
-001163e8 00000008 T _Unwind_GetDataRelBase
-001163f0 00000008 T _Unwind_GetTextRelBase
-001163f8 00000014 T abort
-0011640c 00000054 T __assert_func
-00116460 0000007c T bsearch
-001164dc 00000028 T calloc
-00116504 00000094 T _calloc_r
-00116598 0000000c T __errno
-001165a4 00000034 T exit
-001165d8 00000160 T _fclose_r
-00116738 00000020 T fclose
-00116758 00000278 T __sflush_r
-001169d0 00000094 T _fflush_r
-00116a64 00000038 T fflush
-00116a9c 00000078 t std
-00116b14 0000000c T _cleanup_r
-00116b20 00000048 T __sfmoreglue
-00116b68 0000008c T __sinit
-00116bf4 0000010c T __sfp
-00116d00 0000000c T __sfp_lock_acquire
-00116d0c 0000000c T __sfp_lock_release
-00116d18 0000003c T __libc_fini_array
-00116d54 0000003c T fiprintf
-00116d90 00000138 T _fopen_r
-00116ec8 00000028 T fopen
-00116ef0 000002e0 T _fread_r
-001171d0 00000038 T fread
-00117208 000000f8 T _malloc_trim_r
-00117300 000002e8 T _free_r
-001175e8 00000020 T _fseek_r
-00117608 000005ac T _fseeko_r
-00117bb4 00000068 T _fwalk
-00117c1c 00000070 T _fwalk_reent
-00117c8c 0000007c T __libc_init_array
-00117d08 00000094 T __swhatbuf_r
-00117d9c 000000f8 T __smakebuf_r
-00117e94 00000028 T memalign
-00117ebc 0000014c T _memalign_r
-00118008 00000020 T malloc
-00118028 00000020 T free
-00118048 000007d0 T _malloc_r
-00118818 000000a0 T memcmp
-001188b8 00000120 T memcpy
-001189d8 00000118 T memset
-00118af0 0000000c T __malloc_lock
-00118afc 0000000c T __malloc_unlock
-00118b08 0000094c T qsort
-00119454 000004bc T _realloc_r
-00119910 0000001c t lflush
-0011992c 000001ac T __srefill_r
-00119ad8 00000098 T _raise_r
-00119b70 00000020 T raise
-00119b90 0000003c T __sread
-00119bcc 00000068 T __swrite
-00119c34 00000058 T __sseek
-00119c8c 00000008 T __sclose
-00119c94 00000144 T strchr
-00119dd8 0000005c T strlen
-00119e34 00000098 T strncat
-00119ecc 000000ec T strncmp
-00119fb8 000000c0 T strncpy
-0011a078 00000048 T strnlen
-0011a0c0 0000003c T time
-0011a0fc 00000650 t get_arg
-0011a74c 00000034 T __sprint_r
-0011a780 0000256c T _vfiprintf_r
-0011ccec 000000d4 t __sbprintf
-0011cdc0 00000054 T _wcrtomb_r
-0011ce14 00000020 T _wcsrtombs_r
-0011ce34 00000150 T __swsetup_r
-0011cf84 00000118 T __call_exitprocs
-0011d09c 000000c8 T __sflags
-0011d164 000004a4 T __sfvwrite_r
-0011d608 0000000c T _localeconv_r
-0011d614 00000010 T __locale_mb_cur_max
-0011d624 000002fc T __utf8_mbtowc
-0011d920 000000e0 T memchr
-0011da00 00000154 T memmove
-0011db54 00000190 T _wcsnrtombs_l
-0011dce4 00000048 T _wcsnrtombs_r
-0011dd2c 000000f0 T __utf8_wctomb
-0011de1c 00000008 t null_write
-0011de24 00000018 T setDefaultDevice
-0011de3c 000000c8 T FindDevice
-0011df04 00000028 T RemoveDevice
-0011df2c 0000009c T AddDevice
-0011dfc8 00000078 T _fstat_r
-0011e040 00000014 T _getpid_r
-0011e054 00000038 T _gettimeofday_r
-0011e08c 00000008 T _isatty_r
-0011e094 00000014 T _kill_r
-0011e0a8 00000084 T _lseek_r
-0011e12c 000000c4 T _open_r
-0011e1f0 00000080 T _read_r
-0011e270 00000078 T _sbrk_r
-0011e2e8 00000080 T _write_r
-0011e368 00000024 T _exit
-0011e38c 000001bc T _concatenate_path
-0011e548 0000015c T chdir
-0011e6a4 00000008 T __flockfile
-0011e6ac 00000008 T __funlockfile
-0011e6b4 00000018 T __libc_lock_acquire
-0011e6cc 00000018 T __libc_lock_release
-0011e6e4 00000018 T __libc_lock_init_recursive
-0011e6fc 00000018 T __libc_lock_acquire_recursive
-0011e714 00000018 T __libc_lock_release_recursive
-0011e72c 00000018 T __libc_lock_close_recursive
-0011e744 0000008c T __release_handle
-0011e7d0 000000b4 T __alloc_handle
-0011e884 0000003c T __get_handle
-0011e8c0 000000f8 T _close_r
-0011e9b8 00000028 T __getreent
-0011e9e0 00000044 T strrchr
-0011ea24 T _fini
-0011f000 00000020 R vtable for DrawingPage
-0011f020 00000020 R vtable for ProfilePage
-0011f040 00000020 R vtable for ConnectionPage
-0011f060 R render2d_shbin
-0011f1ec R render2d_shbin_end
-0011f1ec R render2d_shbin_size
-0011f210 00000020 V vtable for M2VPage
-0011f448 00000038 r CSWTCH.11
-0011f480 00000005 r colorFmtSizes
-0011f488 00000004 r depthFmtSizes
-0011f48c 00000010 r CSWTCH.7
-0011f4cc 00000014 r CSWTCH.62
-0011f4e0 00000008 r framebufferInfoSt
-0011f558 00000030 r error_table
-0011f598 0000000c R typeinfo for std::bad_alloc
-0011f5a4 0000000d R typeinfo name for std::bad_alloc
-0011f5b4 00000014 R vtable for std::bad_alloc
-0011f5dc 00000008 R typeinfo for __cxxabiv1::__forced_unwind
-0011f5e4 00000008 R typeinfo for __cxxabiv1::__foreign_exception
-0011f5ec 0000000c R typeinfo for std::bad_exception
-0011f5f8 00000008 R typeinfo for std::exception
-0011f600 00000020 R typeinfo name for __cxxabiv1::__forced_unwind
-0011f620 00000024 R typeinfo name for __cxxabiv1::__foreign_exception
-0011f644 00000012 R typeinfo name for std::bad_exception
-0011f658 0000000d R typeinfo name for std::exception
-0011f668 00000014 R vtable for std::bad_exception
-0011f67c 0000000c R typeinfo for __cxxabiv1::__si_class_type_info
-0011f688 00000025 R typeinfo name for __cxxabiv1::__si_class_type_info
-0011f6b0 0000002c R vtable for __cxxabiv1::__si_class_type_info
-0011f6dc 00000008 R typeinfo for std::type_info
-0011f6e4 0000000d R typeinfo name for std::type_info
-0011f6f4 0000000c R typeinfo for __cxxabiv1::__class_type_info
-0011f700 00000022 R typeinfo name for __cxxabiv1::__class_type_info
-0011f724 0000002c R vtable for __cxxabiv1::__class_type_info
-0011f750 00000060 R __inv_pio4
-0011f7b0 000000e0 R __sincosf_table
-0011f8d8 00000004 R _global_impure_ptr
-0011f908 00000010 r blanks.8759
-0011f918 00000010 r zeroes.8760
-0011f96c 0000006c R __action_table
-0011f9d8 00000100 R __chclass
-0011fad8 0000006c R __state_table
-0011fb44 00000101 R _ctype_
-0011fc50 00000070 R dotab_stdnull
-0011fcc0 r 
-0011fd3c R __exidx_start
-0011feac R __exidx_end
-00120000 W __stacksize__
-00120004 00000004 d framerate
-00120008 00000008 d framerateCounter
-00120010 00000070 d romFS_devoptab
-00120080 00000001 d botFormat
-00120084 00000008 d doubleBuf
-0012008c 00000001 d topFormat
-00120090 00000004 d queueLock
-00120094 00000004 d gspLastEvent
-00120098 00000004 d aptFlags
-0012009c 00000001 d aptHomeAllowed
-001200a0 00000004 V __ctru_linear_heap_size
-001200a4 00000401 d __cwd
-001204a8 00000070 d sdmc_devoptab
-00120518 00000004 D __cxxabiv1::__unexpected_handler
-0012051c 00000004 D __cxxabiv1::__terminate_handler
-00120520 00000001 D __fdlib_version
-00120524 0000000c d __sfp_recursive_mutex
-00120530 0000000c d __sinit_recursive_mutex
-0012053c 00000004 D _impure_ptr
-00120540 00000460 d impure_data
-001209a0 00000408 D __malloc_av_
-00120da8 00000004 D __malloc_sbrk_base
-00120dac 00000004 D __malloc_trim_threshold
-00120db0 0000000c d __malloc_recursive_mutex
-00120dbc 0000000c D __atexit_recursive_mutex
-00120dc8 0000016c D __global_locale
-00120f34 00000004 d defaultDevice
-00120f38 0000008c D devoptab_list
-00120fc4 00000400 d _current_working_directory
-001213c4 00000004 d __hndl_lock
-001213c8 0000000c d __stderr_handle
-001213d4 0000000c d __stdin_handle
-001213e0 0000000c d __stdout_handle
-001213ec 00001000 d handles
-001223ec t __frame_dummy_init_array_entry
-001223ec T __init_array_start
-001223ec B __preinit_array_end
-001223ec B __preinit_array_start
-001223ec D __tdata_lma
-001223ec D __tdata_lma_end
-001223ec D __TMC_END__
-001223ec d __TMC_LIST__
-001223f4 t __do_global_dtors_aux_fini_array_entry
-001223f4 T __fini_array_start
-001223f4 T __init_array_end
-001223f8 T __bss_start__
-001223f8 T __fini_array_end
-001223f8 b saved_stack
-00122400 b completed.10434
-00122404 b object.10439
-0012241c 00000040 b s_projBot
-0012245c 00000040 b s_projTop
-0012249c 00000004 b uLoc_mdlvMtx
-001224a0 00000004 b uLoc_projMtx
-001224a4 00000004 b s_glyphSheets
-001224a8 00000004 b s_textScale
-001224ac 0000000c b hookCookie
-001224b8 00000010 b cpuTime
-001224c8 00000004 b firstTarget
-001224cc 00000008 b frameCounter
-001224d4 00000004 b frameEndCb
-001224d8 00000004 b frameEndCbData
-001224dc 00000001 b frameStage
-001224e0 00000010 b gpuTime
-001224f0 00000001 b inFrame
-001224f1 00000001 b inSafeTransfer
-001224f2 00000001 b initialized
-001224f4 00000004 b lastTarget
-001224f8 0000000c b linkedTarget
-00122504 00000001 b measureGpuTime
-00122508 000000c0 b C3Di_FVUnifEverDirty
-001225c8 00000008 b C3Di_IVUnifEverDirty
-001225d0 00000018 b C3Di_ShaderFVecData
-001225e8 0000000c b sAddrMap
-001225f4 00000008 b sVramPool
-001225fc 00000008 b sLinearPool
-00122604 0000000c b sAddrMap
-00122610 00000401 b __component
-00122a14 00000004 V __romfs_path
-00122a18 00000802 b __utf16path
-0012321c 00000004 b romfs_mount_list
-00123220 00000001 V __ctru_speedup
-00123224 00000004 b sharedFontAddr
-00123228 00000002 b currentBuffer
-0012322a 00000001 b enable3d
-0012322c 00000004 b screenAlloc
-00123230 00000004 b screenFree
-00123234 00000004 b boundQueue
-00123238 00000004 b curQueue
-0012323c 00000001 b isActive
-0012323d 00000001 b isRunning
-0012323e 00000001 b shouldStop
-00123240 00000004 b gspEvent
-00123244 0000001c b gspEventCb
-00123260 0000001c b gspEventCbData
-0012327c 00000007 b gspEventCbOneShot
-00123284 0000001c b gspEventCounts
-001232a0 00000004 b gspEventData
-001232a4 00000004 b gspEventThread
-001232a8 00000038 b gspEvents
-001232e0 00000004 b gspRefCount
-001232e4 00000001 b gspRunEvents
-001232e5 00000001 b aptChainloadMediatype
-001232e8 00000008 b aptChainloadTid
-001232f0 00000004 b aptEventHandlerThread
-001232f4 0000000c b aptEvents
-00123300 0000000c b aptFirstHook
-0012330c 00000001 b aptHomeButtonState
-00123310 00000004 b aptLockHandle
-00123314 00000004 b aptMessageFunc
-00123318 00000004 b aptMessageFuncData
-0012331c 00001000 b aptParameters
-0012431c 00000001 b aptRecentHomeButtonState
-00124320 00000004 b aptRefCount
-00124324 00000008 b aptSleepEvent
-0012432c 00000001 b flagInit.8300
-0012432d 00000001 b flagValue.8301
-00124330 00000004 b serviceName.7930
-00124334 00000006 b aVec
-0012433c 00000004 b cPos
-00124340 00000006 b gRate
-00124348 00000004 b hidRefCount
-0012434c 00000004 b kDown
-00124350 00000004 b kHeld
-00124354 00000004 b kOld
-00124358 00000004 b kUp
-0012435c 00000004 b tPos
-00124360 00000004 b ptmSysmHandle
-00124364 00000004 b ptmSysmRefCount
-00124368 00000080 b fsExemptArchives
-001243e8 00000004 b fsuHandle
-001243ec 00000004 b fsuRefCount
-001243f0 00000004 b swkbdSharedMem
-001243f4 00000004 b swkbdSharedMemHandle
-001243f8 00000004 V __ctru_heap_size
-001243fc 00000008 b sMappablePool
-00124404 0000000c b sAddrMap
-00124410 00000004 b arbiter
-00124414 00000004 b srvHandle
-00124418 00000004 b srvRefCount
-0012441c 00000004 b csPos
-00124420 00000004 b irrstRefCount
-00124424 00000004 b kHeld
-00124428 00000004 b srvPmHandle
-00124430 00000008 b sdmcArchive
-00124438 00000001 b sdmcInitialised
-0012443c 00000010 b (anonymous namespace)::emergency_pool
-0012444c 00000004 b (anonymous namespace)::__new_handler
-00124450 0000000c b eh_globals
-0012445c 00000028 B __malloc_current_mallinfo
-00124484 00000004 B __malloc_max_sbrked_mem
-00124488 00000004 B __malloc_max_total_mem
-0012448c 00000004 B __malloc_top_pad
-00124490 00000004 b heap_start.7420
-00124494 00000004 B fake_heap_end
-00124498 00000004 B fake_heap_start
-0012449c 00000400 b temp_cwd
-0012489c 00000048 B __syscalls
-001248e8 000005a0 B __C2Di_Context
-00124e88 000002d0 B __C3D_Context
-00125158 00000020 B C3D_IVUnif
-00125178 000000c0 B C3D_FVUnifDirty
-00125238 00000002 B C3D_BoolUnifsDirty
-0012523c 00000008 B C3D_IVUnifDirty
-00125244 00000004 B C3D_BoolUnifs
-00125248 00000c00 B C3D_FVUnif
-00125e48 00000004 B g_sharedFont
-00125e4c 00000008 B gfxBottomFramebuffers
-00125e54 00000004 B gspSharedMemHandle
-00125e58 0000001c B bottomFramebufferInfo
-00125e74 00000004 B gspEvent
-00125e78 00000008 B gfxTopLeftFramebuffers
-00125e80 00000008 B gfxTopRightFramebuffers
-00125e88 0000001c B topFramebufferInfo
-00125ea4 00000001 B gfxThreadID
-00125ea8 00000004 B gfxSharedMemory
-00125eac 00000004 B gfxTopFramebufferMaxSize
-00125eb0 00000004 B gfxBottomFramebufferMaxSize
-00125eb4 00000004 B gxCmdBuf
-00125eb8 00000004 B gpuCmdBuf
-00125ebc 00000004 B gpuCmdBufOffset
-00125ec0 00000004 B gpuCmdBufSize
-00125ec4 00000004 B gspGpuHandle
-00125ec8 00000004 B hidMemHandle
-00125ecc 00000004 B hidHandle
-00125ed0 00000004 B hidSharedMem
-00125ed4 00000014 B hidEvents
-00125ee8 00000004 B __system_retAddr
-00125eec 00000004 B __ctru_linear_heap
-00125ef0 00000004 B __ctru_heap
-00125ef4 00000004 B __system_argv
-00125ef8 00000004 B __system_argc
-00125efc 00000004 B irrstHandle
-00125f00 00000004 B irrstEvent
-00125f04 00000004 B irrstMemHandle
-00125f08 00000004 B irrstSharedMem
-00125f0c B __tls_start
-00127318 B __bss_end__
-00127318 A __end__
-00127318 B __tls_end
+00100fe0 00000140 T M2V_C2D::init()
+00101120 00000040 T M2V_C2D::quit()
+00101160 0000030c T M2V_C2D::changePage()
+0010146c 00000080 T M2V_C2D::run()
+001014ec 0000002c T DrawingPage::run()
+00101518 00000190 T DrawingPage::checkButtonInput() const
+001016a8 00000764 T DrawingPage::draw()
+00101e0c 00000044 W DrawingPage::~DrawingPage()
+00101e0c 00000044 W DrawingPage::~DrawingPage()
+00101e50 0000004c W DrawingPage::~DrawingPage()
+00101e9c 000001bc T DrawingPage::init()
+00102058 000004d0 T DrawingPage::drawPixel(unsigned int, unsigned int)
+00102528 000000f4 T DrawingPage::drawLine(unsigned int, unsigned int, unsigned int, unsigned int)
+0010261c 000002c8 T DrawingPage::update()
+001028e4 00000008 W ProfilePage::checkButtonInput() const
+001028ec 00000004 T ProfilePage::update()
+001028f0 00000044 T ProfilePage::run()
+00102934 000001dc T ProfilePage::draw()
+00102b10 00000044 W ProfilePage::~ProfilePage()
+00102b10 00000044 W ProfilePage::~ProfilePage()
+00102b54 0000004c W ProfilePage::~ProfilePage()
+00102ba0 000001ac T ProfilePage::init()
+00102d4c 00000034 T main
+00102d80 00000038 T ConnectionPage::run()
+00102db8 0000005c T ConnectionPage::checkButtonInput() const
+00102e14 00000044 W ConnectionPage::~ConnectionPage()
+00102e14 00000044 W ConnectionPage::~ConnectionPage()
+00102e58 0000004c W ConnectionPage::~ConnectionPage()
+00102ea4 00000080 T M2VPage::textWrite(char const*, float, float, float, float, unsigned long)
+00102f24 00000078 T M2VPage::message(char const*)
+00102f9c 0000028c T ConnectionPage::draw()
+00103228 000000bc T M2VPage::strAdd(char const*, char const*) const
+001032e4 000000d0 T M2VPage::keyboardInput(char*, unsigned int, char const*)
+001033b4 00000224 T ConnectionPage::update()
+001035d8 000001ac T ConnectionPage::init()
+00103784 00000330 T C2D_Init
+00103ab4 00000044 T C2D_Fini
+00103af8 000000c8 T C2D_Prepare
+00103bc0 0000010c T C2D_SceneSize
+00103ccc 00000044 T C2D_CreateScreenTarget
+00103d10 0000013c T C2Di_CalcQuad
+00103e4c 00000040 T C2Di_AppendVtx
+00103e8c 00000030 T C2Di_FlushVtxBuf
+00103ebc 00000020 t C2Di_FrameEndHook
+00103edc 00000018 T C2D_Flush
+00103ef4 00000030 T C2D_TargetClear
+00103f24 00000210 T C2Di_Update
+00104134 000002ec T C2D_DrawImage
+00104420 0000019c T C2D_DrawRectangle
+001045bc 00000018 t C2Di_GlyphComp
+001045d4 000001c8 T C2D_TextBufNew
+0010479c 00000004 T C2D_TextBufDelete
+001047a0 0000000c T C2D_TextBufClear
+001047ac 00000198 T C2D_TextFontParseLine
+00104944 00000090 T C2D_TextFontParse
+001049d4 00000014 T C2D_TextParse
+001049e8 0000002c T C2D_TextOptimize
+00104a14 0000034c T C2D_DrawText
+00104d60 0000006c T C2D_SpriteSheetLoadFromHandle
+00104dcc 00000034 T C2D_SpriteSheetLoad
+00104e00 00000028 T C2D_SpriteSheetFree
+00104e28 00000008 T C2D_SpriteSheetCount
+00104e30 00000028 T C2D_SpriteSheetGetImage
+00104e58 00000044 T C2D_FontGlyphIndexFromCodePoint
+00104e9c 00000078 T C2D_FontCalcGlyphPos
+00104f14 000000c4 t C3Di_SplitFrame.part.1
+00104fd8 00000004 W C3Di_LightEnvUpdate
+00104fdc 00000004 W C3Di_LightEnvDirty
+00104fe0 000000ac t C3Di_AptEventHook
+0010508c 00000004 W C3Di_GasUpdate
+00105090 0000021c T C3D_Init
+001052ac 00000098 T C3D_SetViewport
+00105344 0000050c T C3Di_UpdateContext
+00105850 00000020 T C3Di_SplitFrame
+00105870 00000064 T C3D_Fini
+001058d4 00000114 T C3D_BindProgram
+001059e8 00000054 t C3Di_RenderQueueInit
+00105a3c 00000080 t C3Di_RenderTargetDestroy
+00105abc 000000ac t onVBlank1
+00105b68 0000013c t onVBlank0
+00105ca4 0000000c t C3Di_RenderTargetNew
+00105cb0 0000007c t C3Di_WaitAndClearQueue
+00105d2c 000000c0 t onQueueFinish
+00105dec 00000044 t C3D_FrameSplit.part.6
+00105e30 00000030 T C3D_FrameSync
+00105e60 000000a0 T C3Di_RenderQueueExit
+00105f00 00000020 T C3Di_RenderQueueWaitDone
+00105f20 0000007c T C3D_FrameBegin
+00105f9c 00000048 T C3D_FrameDrawOn
+00105fe4 00000018 T C3D_FrameSplit
+00105ffc 00000164 T C3D_FrameEnd
+00106160 0000001c T C3D_FrameEndHook
+0010617c 0000017c T C3D_RenderTargetCreate
+001062f8 0000004c T C3D_RenderTargetSetOutput
+00106344 000000b4 T C3D_SyncTextureCopy
+001063f8 00000284 T C3D_TexInitWithParams
+0010667c 000000dc T C3D_TexLoadImage
+00106758 00000048 T C3D_TexBind
+001067a0 0000007c T C3D_TexDelete
+0010681c 00000174 T C3Di_SetTex
+00106990 000003e8 t Tex3DSi_ImportCommon
+00106d78 00000034 T Tex3DS_TextureImportStdio
+00106dac 00000008 T Tex3DS_GetNumSubTextures
+00106db4 0000001c T Tex3DS_GetSubTexture
+00106dd0 00000004 T Tex3DS_TextureFree
+00106dd4 0000001c T C3D_CalcColorBufSize
+00106df0 0000001c T C3D_CalcDepthBufSize
+00106e0c 00000044 T C3D_SetFrameBuf
+00106e50 00000168 T C3Di_FrameBufBind
+00106fb8 000000c8 T C3D_FrameBufClear
+00107080 00000048 T C3D_FrameBufTransfer
+001070c8 00000034 T C3D_GetTexEnv
+001070fc 00000024 T C3Di_TexEnvBind
+00107120 0000006c T C3D_ProcTexInit
+0010718c 00000050 T C3D_ProcTexBind
+001071dc 00000060 T C3D_ProcTexLutBind
+0010723c 000000a4 T ProcTexLut_FromArray
+001072e0 00000174 T C3Di_ProcTexUpdate
+00107454 00000068 T C3Di_ProcTexDirty
+001074bc 00000024 T BufInfo_Init
+001074e0 00000084 T BufInfo_Add
+00107564 00000040 T C3D_SetBufInfo
+001075a4 00000048 T C3Di_BufInfoBind
+001075ec 00000148 T C3D_DrawArrays
+00107734 00000040 T C3D_DepthMap
+00107774 0000001c T C3D_CullFace
+00107790 00000040 T C3D_StencilTest
+001077d0 00000024 T C3D_StencilOp
+001077f4 0000001c T C3D_BlendingColor
+00107810 00000024 T C3D_EarlyDepthTest
+00107834 0000002c T C3D_DepthTest
+00107860 0000002c T C3D_AlphaTest
+0010788c 00000050 T C3D_AlphaBlend
+001078dc 00000030 T C3D_FragOpMode
+0010790c 00000044 T C3D_FragOpShadow
+00107950 000001ac T C3Di_EffectBind
+00107afc 00000028 T AttrInfo_Init
+00107b24 000000a0 T AttrInfo_AddLoader
+00107bc4 00000054 T C3D_SetAttrInfo
+00107c18 00000080 T C3Di_AttrInfoBind
+00107c98 000000a4 T C3D_ImmSendAttrib
+00107d3c 000002b8 T C3D_UpdateUniforms
+00107ff4 000000c0 T C3Di_DirtyUniforms
+001080b4 000000e0 T C3Di_LoadShaderUniforms
+00108194 00000028 T C3Di_ClearShaderUniforms
+001081bc 000000cc T Mtx_Ortho
+00108288 000000cc T Mtx_OrthoTilt
+00108354 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
+00108378 00000004 t addrMapNodeDestructor(rbtree_node*)
+0010837c 00000114 T vramMemAlign
+00108490 00000008 T vramAlloc
+00108498 00000054 T vramFree
+001084ec 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
+00108510 00000004 t addrMapNodeDestructor(rbtree_node*)
+00108514 00000124 T linearMemAlign
+00108638 00000008 T linearAlloc
+00108640 00000054 T linearFree
+00108694 0000008c T MemPool::CoalesceRight(MemBlock*)
+00108720 00000174 T MemPool::Allocate(MemChunk&, unsigned long, int)
+00108894 000000fc T MemPool::Deallocate(MemChunk const&)
+00108990 00000008 t romfs_close
+00108998 000000d4 t romfs_seek
+00108a6c 00000024 t romfs_dirreset
+00108a90 00000078 t romfs_fstat
+00108b08 00000054 t _romfs_read_chk
+00108b5c 000000cc t romfs_read
+00108c28 0000007c t romfs_free
+00108ca4 0000016c t romfsMountCommon
+00108e10 00000254 t romfs_dirnext
+00109064 000000bc t romfsInitMtime.isra.0
+00109120 000000b4 t searchForFile.constprop.0
+001091d4 000000b8 t searchForDir.constprop.0
+0010928c 000001c4 t navigateToDir.constprop.0
+00109450 0000011c t romfs_open
+0010956c 00000204 t romfs_stat
+00109770 00000054 t romfs_chdir
+001097c4 00000078 t romfs_diropen
+0010983c 00000008 t romfs_dirclose
+00109844 00000344 T romfsMount
+00109b88 00000078 T romfsUnmount
+00109c00 00000058 t getSysTime
+00109c58 00000028 t __ctru_speedup_config.part.0
+00109c80 0000004c T osConvertVirtToPhys
+00109ccc 00000024 T osGetMemRegionUsed
+00109cf0 00000128 T __libctru_gtod
+00109e18 00000018 T __ctru_speedup_config
+00109e30 0000009c T fontEnsureMapped
+00109ecc 00000134 T fontGlyphIndexFromCodePoint
+0010a000 0000006c T fontGetCharWidthInfo
+0010a06c 000001c0 T fontCalcGlyphPos
+0010a22c 0000008c t gfxSetFramebufferInfo.part.0
+0010a2b8 0000006c t gfxSetFramebufferInfo
+0010a324 00000058 t gfxGetFramebuffer.part.0
+0010a37c 00000010 T gfxIs3D
+0010a38c 00000018 T __get_bytes_per_pixel
+0010a3a4 00000184 T gfxSetScreenFormat
+0010a528 00000214 T gfxInit
+0010a73c 00000010 T gfxInitDefault
+0010a74c 000000e0 T gfxExit
+0010a82c 00000064 T gfxGetFramebuffer
+0010a890 000000f4 T gfxConfigScreen
+0010a984 000001f0 T shaderInstanceInit
+0010ab74 00000034 T shaderInstanceFree
+0010aba8 00000018 T shaderInstanceGetUniformLocation
+0010abc0 00000018 T shaderProgramInit
+0010abd8 0000002c T shaderProgramFree
+0010ac04 0000006c T shaderProgramSetVsh
+0010ac70 000008b4 T shaderProgramConfigure
+0010b524 000001f8 t DVLE_GenerateOutmap.part.0
+0010b71c 000001c8 T DVLB_ParseFile
+0010b8e4 00000038 T DVLB_Free
+0010b91c 00000078 T DVLE_GetUniformRegister
+0010b994 00000038 t submitGxCommand
+0010b9cc 00000010 T GX_BindQueue
+0010b9dc 00000050 T GX_ProcessCommandList
+0010ba2c 00000054 T GX_MemoryFill
+0010ba80 00000048 T GX_DisplayTransfer
+0010bac8 0000004c T GX_TextureCopy
+0010bb14 00000074 t gxCmdQueueDoCommands.part.0
+0010bb88 000000c8 T gxCmdQueueInterrupt
+0010bc50 0000004c T gxCmdQueueClear
+0010bc9c 000000f8 T gxCmdQueueAdd
+0010bd94 00000080 T gxCmdQueueRun
+0010be14 00000060 T gxCmdQueueStop
+0010be74 00000084 T gxCmdQueueWait
+0010bef8 0000013c T GPUCMD_Add
+0010c034 000000b0 T GPUCMD_Split
+0010c0e4 00000040 T f32tof16
+0010c124 00000040 T f32tof24
+0010c164 00000044 T f32tof31
+0010c1a8 00000074 T gspInit
+0010c21c 0000003c T gspExit
+0010c258 00000034 T gspSetEventCallback
+0010c28c 000000a4 T gspInitEventHandler
+0010c330 00000040 T gspExitEventHandler
+0010c370 00000050 T gspWaitForEvent
+0010c3c0 00000064 T gspWaitForAnyEvent
+0010c424 00000178 t gspEventThreadMain
+0010c59c 00000124 T gspSubmitGxCommand
+0010c6c0 0000006c T GSPGPU_SetBufferSwap
+0010c72c 0000004c T GSPGPU_FlushDataCache
+0010c778 00000034 T GSPGPU_SetLcdForceBlack
+0010c7ac 00000064 T GSPGPU_RegisterInterruptRelayQueue
+0010c810 0000002c T GSPGPU_UnregisterInterruptRelayQueue
+0010c83c 00000048 T GSPGPU_AcquireRight
+0010c884 0000002c T GSPGPU_ReleaseRight
+0010c8b0 00000080 T GSPGPU_ImportDisplayCaptureInfo
+0010c930 0000002c T GSPGPU_SaveVramSysArea
+0010c95c 0000002c T GSPGPU_RestoreVramSysArea
+0010c988 00000004 W _aptDebug
+0010c98c 00000170 T aptSendCommand
+0010cafc 0000003c t aptExitProcess
+0010cb38 00000030 T aptHook
+0010cb68 00000030 T aptUnhook
+0010cb98 0000001c T aptSetMessageCallback
+0010cbb4 00000050 T APT_InquireNotification
+0010cc04 00000194 t aptEventHandler
+0010cd98 00000074 T APT_AppletUtility
+0010ce0c 000000b0 T aptSetSleepAllowed
+0010cebc 000000b4 T APT_GlanceParameter
+0010cf70 000000c8 T APT_ReceiveParameter
+0010d038 000000bc t aptReceiveParameter.constprop.0
+0010d0f8 000001e0 t aptScreenTransfer
+0010d2d8 00000210 t aptWaitForWakeUp
+0010d4e8 00000058 T APT_SendParameter
+0010d540 00000070 T APT_CancelParameter
+0010d5b0 0000025c T aptInit
+0010d80c 00000088 t aptClearParamQueue
+0010d894 00000264 T aptMainLoop
+0010daf8 00000254 T aptExit
+0010dd4c 000000dc T aptLaunchLibraryApplet
+0010de28 0000007c T APT_CheckNew3DS
+0010dea4 00000048 T APT_GetSharedFont
+0010deec 00000028 t hidCheckSectionUpdateTime.part.0
+0010df14 000000d0 T hidExit
+0010dfe4 000001d8 T hidScanInput
+0010e1bc 00000010 T hidKeysDown
+0010e1cc 00000018 T hidTouchRead
+0010e1e4 00000090 T HIDUSER_GetHandles
+0010e274 000001a4 T hidInit
+0010e418 00000074 T ptmSysmInit
+0010e48c 0000003c T ptmSysmExit
+0010e4c8 00000034 T PTMSYSM_ConfigureNew3DSCPU
+0010e4fc 00000028 t fsSessionForArchive.part.0
+0010e524 000000c4 T fsInit
+0010e5e8 0000003c T fsExit
+0010e624 00000064 T fsExemptFromSession
+0010e688 0000005c T fsUnexemptFromSession
+0010e6e4 000000bc T FSUSER_OpenFile
+0010e7a0 000000d4 T FSUSER_OpenFileDirectly
+0010e874 000000ac T FSUSER_DeleteFile
+0010e920 000000e8 T FSUSER_RenameFile
+0010ea08 000000ac T FSUSER_DeleteDirectory
+0010eab4 000000c4 T FSUSER_CreateFile
+0010eb78 000000b4 T FSUSER_CreateDirectory
+0010ec2c 000000e8 T FSUSER_RenameDirectory
+0010ed14 000000a0 T FSUSER_OpenDirectory
+0010edb4 00000098 T FSUSER_OpenArchive
+0010ee4c 000000a0 T FSUSER_ControlArchive
+0010eeec 00000078 T FSUSER_CloseArchive
+0010ef64 00000078 T FSUSER_GetSdmcArchiveResource
+0010efdc 00000064 T FSUSER_IsSdmcWritable
+0010f040 0000005c T FSFILE_Read
+0010f09c 00000064 T FSFILE_Write
+0010f100 00000038 T FSFILE_GetSize
+0010f138 00000028 T FSFILE_SetSize
+0010f160 0000003c T FSFILE_Close
+0010f19c 00000024 T FSFILE_Flush
+0010f1c0 00000054 T FSDIR_Read
+0010f214 0000003c T FSDIR_Close
+0010f250 00000028 t swkbdConvertToUTF16.part.0
+0010f278 00000168 t swkbdMessageCallback
+0010f3e0 00000078 T swkbdInit
+0010f458 0000002c T swkbdSetHintText
+0010f484 00000054 T swkbdSetButton
+0010f4d8 000003b4 T swkbdInputText
+0010f88c 00000120 t iov_memmove
+0010f9ac 000000cc t buffer_read
+0010fa78 000000d8 t iov_read
+0010fb50 000001c4 t decompress_rle
+0010fd14 00000268 t decompress_lzss
+0010ff7c 000002ec t decompress_huff.isra.0.part.0
+00110268 00000440 t decompress_lz11
+001106a8 00000010 T decompressCallback_Stdio
+001106b8 000000e8 T decompressHeader
+001107a0 0000023c T decompressV
+001109dc 00000014 T rbtree_init
+001109f0 000001a4 t do_insert
+00110b94 00000008 T rbtree_insert
+00110b9c 00000090 T rbtree_rotate
+00110c2c 00000334 T rbtree_remove
+00110f60 00000074 T rbtree_find
+00110fd4 000000e8 T utf16_to_utf8
+001110bc 00000060 T decode_utf16
+0011111c 00000138 T decode_utf8
+00111254 000000c0 T utf8_to_utf16
+00111314 00000038 W __libctru_init
+0011134c 00000034 t __libctru_nanosleep
+00111380 00000030 t __ctru_get_reent
+001113b0 000000fc T __system_initSyscalls
+001114ac 00000100 W __system_allocateHeaps
+001115ac 000000f0 T __system_initArgv
+0011169c T svcControlMemory
+001116bc T svcExitProcess
+001116c4 T svcCreateThread
+001116e4 T svcExitThread
+001116ec T svcSleepThread
+001116f4 T svcReleaseMutex
+001116fc T svcCreateEvent
+00111710 T svcSignalEvent
+00111718 T svcClearEvent
+00111720 T svcCreateMemoryBlock
+00111738 T svcMapMemoryBlock
+00111740 T svcUnmapMemoryBlock
+00111748 T svcCreateAddressArbiter
+0011175c T svcArbitrateAddress
+00111774 T svcCloseHandle
+0011177c T svcWaitSynchronization
+00111784 T svcWaitSynchronizationN
+001117ac T svcDuplicateHandle
+001117c0 T svcGetSystemTick
+001117c8 T svcGetSystemInfo
+001117e0 T svcConnectToPort
+001117f4 T svcSendSyncRequest
+001117fc T svcBreak
+00111804 00000024 t addrMapNodeComparator(rbtree_node const*, rbtree_node const*)
+00111828 00000004 t addrMapNodeDestructor(rbtree_node*)
+0011182c 000000e8 T mappableAlloc
+00111914 00000054 T mappableFree
+00111968 00000038 t LightLock_Unlock.part.0
+001119a0 0000000c T __sync_init
+001119ac 00000018 T __sync_fini
+001119c4 00000010 T __sync_get_arbiter
+001119d4 00000018 T LightLock_Init
+001119ec 00000090 T LightLock_Lock
+00111a7c 00000034 T LightLock_TryLock
+00111ab0 00000020 T LightLock_Unlock
+00111ad0 00000024 T RecursiveLock_Init
+00111af4 00000030 T RecursiveLock_Lock
+00111b24 00000058 T RecursiveLock_TryLock
+00111b7c 00000038 T RecursiveLock_Unlock
+00111bb4 00000038 T LightEvent_Init
+00111bec 0000007c T LightEvent_Clear
+00111c68 000000dc T LightEvent_Signal
+00111d44 000000c0 T LightEvent_Wait
+00111e04 00000084 T envGetHandle
+00111e88 0000004c T envDestroyHandles
+00111ed4 00000058 T srvExit
+00111f2c 00000038 T srvRegisterClient
+00111f64 000000cc T srvInit
+00112030 00000080 T srvGetServiceHandleDirect
+001120b0 00000048 T srvGetServiceHandle
+001120f8 0000001c t threadFree.part.0
+00112114 00000180 T threadCreate
+00112294 00000024 T threadJoin
+001122b8 00000068 T threadExit
+00112320 00000048 t _thread_begin
+00112368 000000ac T irrstScanInput
+00112414 00000024 T irrstKeysHeld
+00112438 00000050 T IRRST_GetHandles
+00112488 00000154 T irrstInit
+001125dc 0000002c T IRRST_Shutdown
+00112608 000000ac T irrstExit
+001126b4 0000000c T srvPmGetSessionHandle
+001126c0 00000050 T rbtree_node_next
+00112710 00000068 T encode_utf16
+00112778 00000104 T encode_utf8
+0011287c 0000001c W __appInit
+00112898 0000001c W __appExit
+001128b4 000000a0 W __libctru_exit
+00112954 00000014 t sdmc_link
+00112968 00000014 t sdmc_dirreset
+0011297c 00000014 t sdmc_chmod
+00112990 00000024 t error_cmp
+001129b4 00000050 t sdmc_translate_error
+00112a04 00000034 t sdmc_fsync
+00112a38 00000054 t sdmc_ftruncate
+00112a8c 000000bc t sdmc_statvfs
+00112b48 00000038 t sdmc_dirclose
+00112b80 0000013c t sdmc_dirnext
+00112cbc 00000034 t sdmc_close
+00112cf0 00000070 t sdmc_fstat
+00112d60 000000d4 t sdmc_seek
+00112e34 00000078 t sdmc_read
+00112eac 000000ac t sdmc_write
+00112f58 000001b0 t sdmc_utf16path
+00113108 00000074 t sdmc_rmdir
+0011317c 000000a4 t sdmc_diropen
+00113220 000000ac t sdmc_chdir
+001132cc 00000098 t sdmc_mkdir
+00113364 00000108 t sdmc_rename
+0011346c 00000074 t sdmc_unlink
+001134e0 00000108 t sdmc_stat
+001135e8 00000198 t sdmc_open
+00113780 00000014 t sdmc_fchmod
+00113794 00000168 T sdmcInit
+001138fc 00000060 T sdmcExit
+0011395c T __aeabi_read_tp
+00113968 00000004 T operator delete(void*)
+0011396c 00000004 T operator delete[](void*)
+00113970 0000005c T operator new(unsigned int)
+001139cc 00000004 T operator new[](unsigned int)
+001139d0 00000008 T __cxa_pure_virtual
+001139d8 0000000c T std::bad_alloc::what() const
+001139e4 00000020 T std::bad_alloc::~bad_alloc()
+001139e4 00000020 T std::bad_alloc::~bad_alloc()
+00113a04 0000002c T std::bad_alloc::~bad_alloc()
+00113a30 00000004 T operator delete(void*, unsigned int)
+00113a34 000000d4 t (anonymous namespace)::pool::free(void*) [clone .constprop.0]
+00113b08 00000090 t (anonymous namespace)::pool::allocate(unsigned int) [clone .constprop.0]
+00113b98 00000044 T __cxa_allocate_exception
+00113bdc 00000030 T __cxa_free_exception
+00113c0c 00000040 t _GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv
+00113c4c 00000004 T std::exception::~exception()
+00113c4c 00000004 T std::exception::~exception()
+00113c50 00000004 T std::bad_exception::~bad_exception()
+00113c50 00000004 T std::bad_exception::~bad_exception()
+00113c54 0000000c T transaction clone for std::bad_exception::what() const
+00113c54 0000000c T std::bad_exception::what() const
+00113c60 00000018 T std::bad_exception::~bad_exception()
+00113c78 00000038 T __cxxabiv1::__terminate(void (*)())
+00113cb0 00000018 T std::terminate()
+00113cc8 0000000c T __cxxabiv1::__unexpected(void (*)())
+00113cd4 00000018 T std::unexpected()
+00113cec 00000014 T std::get_terminate()
+00113d00 00000014 T std::get_unexpected()
+00113d14 00000070 t __gxx_exception_cleanup(_Unwind_Reason_Code, _Unwind_Control_Block*)
+00113d84 00000070 T __cxa_init_primary_exception
+00113df4 00000058 T __cxa_throw
+00113e4c 000000b0 T __cxa_rethrow
+00113efc 00000014 T std::get_new_handler()
+00113f10 00000020 T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+00113f10 00000020 T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+00113f30 0000002c T __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+00113f5c 0000006c T __cxxabiv1::__si_class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+00113fc8 000000dc T __cxxabiv1::__si_class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+001140a4 00000044 T __cxxabiv1::__si_class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+001140e8 00000004 T std::type_info::~type_info()
+001140e8 00000004 T std::type_info::~type_info()
+001140ec 00000008 T std::type_info::__is_pointer_p() const
+001140ec 00000008 T std::type_info::__is_function_p() const
+001140f4 0000004c T std::type_info::operator==(std::type_info const&) const
+00114140 0000005c T __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void**) const
+0011419c 00000014 T __cxxabiv1::__class_type_info::__do_find_public_src(int, void const*, __cxxabiv1::__class_type_info const*, void const*) const
+001141b0 00000020 T __cxxabiv1::__class_type_info::~__class_type_info()
+001141b0 00000020 T __cxxabiv1::__class_type_info::~__class_type_info()
+001141d0 0000002c T __cxxabiv1::__class_type_info::~__class_type_info()
+001141fc 00000068 T __cxxabiv1::__class_type_info::__do_dyncast(int, __cxxabiv1::__class_type_info::__sub_kind, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__dyncast_result&) const
+00114264 0000002c T __cxxabiv1::__class_type_info::__do_upcast(__cxxabiv1::__class_type_info const*, void const*, __cxxabiv1::__class_type_info::__upcast_result&) const
+00114290 00000044 T __cxxabiv1::__class_type_info::__do_catch(std::type_info const*, void**, unsigned int) const
+001142d4 T __cxa_end_cleanup
+001142e4 00000138 T __cxa_type_match
+0011441c 000000b4 T __cxa_begin_cleanup
+001144d0 000000b4 T __gnu_end_cleanup
+00114584 00000070 t __cxxabiv1::__is_gxx_exception_class(char*)
+001145f4 0000002c T __cxa_call_terminate
+00114620 00000158 T __cxa_call_unexpected
+00114778 000000cc T __cxa_begin_catch
+00114844 000000e0 T __cxa_end_catch
+00114924 0000000c T __cxa_get_globals_fast
+00114930 0000000c T __cxa_get_globals
+0011493c 00000168 t read_encoded_value_with_base(unsigned char, unsigned int, unsigned char const*, unsigned int*)
+00114aa4 00000064 t base_of_encoded_value(unsigned char, _Unwind_Context*)
+00114b08 000000d8 t parse_lsda_header(_Unwind_Context*, unsigned char const*, lsda_header_info*)
+00114be0 00000700 T __gxx_personality_v0
+001152e0 00000244 T cosf
+00115524 00000024 t with_errnof
+00115548 0000001c T __math_invalidf
+00115564 000000b4 T ceilf
+00115618 0000026c T sinf
+00115888 000000f8 T sqrt
+00115980 00000008 T __ieee754_sqrt
+00115988 00000008 T matherr
+00115990 00000038 T __aeabi_d2lz
+00115990 00000038 T __fixdfdi
+001159c8 00000040 T __aeabi_d2ulz
+001159c8 00000040 T __fixunsdfdi
+00115a08 00000130 T __udivmoddi4
+00115b38 00000018 t selfrel_offset31
+00115b50 0000008c t search_EIT_table
+00115bdc 00000040 t __gnu_unwind_get_pr_addr
+00115c1c 00000114 t get_eit_entry
+00115d30 00000088 t restore_non_core_regs
+00115db8 00000014 t _Unwind_decode_typeinfo_ptr.isra.0
+00115dcc 00000004 t _Unwind_DebugHook
+00115dd0 00000064 t unwind_phase2
+00115e34 00000134 t unwind_phase2_forced
+00115f68 000000a4 T __gnu_Unwind_RaiseException
+0011600c 00000024 T __gnu_Unwind_ForcedUnwind
+00116030 00000074 T __gnu_Unwind_Resume
+001160a4 00000020 T __gnu_Unwind_Resume_or_Rethrow
+001160c4 00000004 T _Unwind_Complete
+001160c8 00000018 T _Unwind_DeleteException
+001160e0 00000064 T _Unwind_VRS_Get
+00116144 0000002c t _Unwind_GetGR
+00116170 00000064 T _Unwind_VRS_Set
+001161d4 00000030 t _Unwind_SetGR
+00116204 000000c0 T __gnu_Unwind_Backtrace
+001162c4 0000044c t __gnu_unwind_pr_common
+00116710 00000008 T __aeabi_unwind_cpp_pr0
+00116718 00000008 W __aeabi_unwind_cpp_pr1
+00116720 00000008 W __aeabi_unwind_cpp_pr2
+00116728 000003d0 T _Unwind_VRS_Pop
+00116af8 00000060 t next_unwind_byte
+00116b58 0000002c t _Unwind_GetGR.constprop.0
+00116b84 00000004 t unwind_UCB_from_context
+00116b88 000003c8 T __gnu_unwind_execute
+00116f50 00000044 T __gnu_unwind_frame
+00116f94 00000010 T _Unwind_GetRegionStart
+00116fa4 0000001c T _Unwind_GetLanguageSpecificData
+00116fc0 00000008 T _Unwind_GetDataRelBase
+00116fc8 00000008 T _Unwind_GetTextRelBase
+00116fd0 00000014 T abort
+00116fe4 00000054 T __assert_func
+00117038 0000007c T bsearch
+001170b4 00000028 T calloc
+001170dc 00000094 T _calloc_r
+00117170 0000000c T __errno
+0011717c 00000034 T exit
+001171b0 00000160 T _fclose_r
+00117310 00000020 T fclose
+00117330 00000278 T __sflush_r
+001175a8 00000094 T _fflush_r
+0011763c 00000038 T fflush
+00117674 00000078 t std
+001176ec 0000000c T _cleanup_r
+001176f8 00000048 T __sfmoreglue
+00117740 0000008c T __sinit
+001177cc 0000010c T __sfp
+001178d8 0000000c T __sfp_lock_acquire
+001178e4 0000000c T __sfp_lock_release
+001178f0 0000003c T __libc_fini_array
+0011792c 0000003c T fiprintf
+00117968 00000138 T _fopen_r
+00117aa0 00000028 T fopen
+00117ac8 000002e0 T _fread_r
+00117da8 00000038 T fread
+00117de0 000000f8 T _malloc_trim_r
+00117ed8 000002e8 T _free_r
+001181c0 00000020 T _fseek_r
+001181e0 000005ac T _fseeko_r
+0011878c 00000068 T _fwalk
+001187f4 00000070 T _fwalk_reent
+00118864 0000007c T __libc_init_array
+001188e0 00000094 T __swhatbuf_r
+00118974 000000f8 T __smakebuf_r
+00118a6c 00000028 T memalign
+00118a94 0000014c T _memalign_r
+00118be0 00000020 T malloc
+00118c00 00000020 T free
+00118c20 000007d0 T _malloc_r
+001193f0 000000a0 T memcmp
+00119490 00000120 T memcpy
+001195b0 00000118 T memset
+001196c8 0000000c T __malloc_lock
+001196d4 0000000c T __malloc_unlock
+001196e0 0000094c T qsort
+0011a02c 000004bc T _realloc_r
+0011a4e8 0000001c t lflush
+0011a504 000001ac T __srefill_r
+0011a6b0 00000098 T _raise_r
+0011a748 00000020 T raise
+0011a768 0000003c T __sread
+0011a7a4 00000068 T __swrite
+0011a80c 00000058 T __sseek
+0011a864 00000008 T __sclose
+0011a86c 00000144 T strchr
+0011a9b0 0000005c T strlen
+0011aa0c 00000098 T strncat
+0011aaa4 000000ec T strncmp
+0011ab90 000000c0 T strncpy
+0011ac50 00000048 T strnlen
+0011ac98 0000003c T time
+0011acd4 00000650 t get_arg
+0011b324 00000034 T __sprint_r
+0011b358 0000256c T _vfiprintf_r
+0011d8c4 000000d4 t __sbprintf
+0011d998 00000054 T _wcrtomb_r
+0011d9ec 00000020 T _wcsrtombs_r
+0011da0c 00000150 T __swsetup_r
+0011db5c 00000118 T __call_exitprocs
+0011dc74 000000c8 T __sflags
+0011dd3c 000004a4 T __sfvwrite_r
+0011e1e0 0000000c T _localeconv_r
+0011e1ec 00000010 T __locale_mb_cur_max
+0011e1fc 000002fc T __utf8_mbtowc
+0011e4f8 000000e0 T memchr
+0011e5d8 00000154 T memmove
+0011e72c 00000190 T _wcsnrtombs_l
+0011e8bc 00000048 T _wcsnrtombs_r
+0011e904 000000f0 T __utf8_wctomb
+0011e9f4 00000008 t null_write
+0011e9fc 00000018 T setDefaultDevice
+0011ea14 000000c8 T FindDevice
+0011eadc 00000028 T RemoveDevice
+0011eb04 0000009c T AddDevice
+0011eba0 00000078 T _fstat_r
+0011ec18 00000014 T _getpid_r
+0011ec2c 00000038 T _gettimeofday_r
+0011ec64 00000008 T _isatty_r
+0011ec6c 00000014 T _kill_r
+0011ec80 00000084 T _lseek_r
+0011ed04 000000c4 T _open_r
+0011edc8 00000080 T _read_r
+0011ee48 00000078 T _sbrk_r
+0011eec0 00000080 T _write_r
+0011ef40 00000024 T _exit
+0011ef64 000001bc T _concatenate_path
+0011f120 0000015c T chdir
+0011f27c 00000008 T __flockfile
+0011f284 00000008 T __funlockfile
+0011f28c 00000018 T __libc_lock_acquire
+0011f2a4 00000018 T __libc_lock_release
+0011f2bc 00000018 T __libc_lock_init_recursive
+0011f2d4 00000018 T __libc_lock_acquire_recursive
+0011f2ec 00000018 T __libc_lock_release_recursive
+0011f304 00000018 T __libc_lock_close_recursive
+0011f31c 0000008c T __release_handle
+0011f3a8 000000b4 T __alloc_handle
+0011f45c 0000003c T __get_handle
+0011f498 000000f8 T _close_r
+0011f590 00000028 T __getreent
+0011f5b8 00000044 T strrchr
+0011f5fc T _fini
+00120000 00000020 R vtable for DrawingPage
+00120020 00000020 R vtable for ProfilePage
+00120040 00000020 R vtable for ConnectionPage
+00120060 R render2d_shbin
+001201ec R render2d_shbin_end
+001201ec R render2d_shbin_size
+00120210 00000020 V vtable for M2VPage
+00120474 00000038 r CSWTCH.11
+001204ac 00000005 r colorFmtSizes
+001204b4 00000004 r depthFmtSizes
+001204b8 00000010 r CSWTCH.7
+001204f8 00000014 r CSWTCH.62
+0012050c 00000008 r framebufferInfoSt
+00120584 00000030 r error_table
+001205c4 0000000c R typeinfo for std::bad_alloc
+001205d0 0000000d R typeinfo name for std::bad_alloc
+001205e0 00000014 R vtable for std::bad_alloc
+00120608 00000008 R typeinfo for __cxxabiv1::__forced_unwind
+00120610 00000008 R typeinfo for __cxxabiv1::__foreign_exception
+00120618 0000000c R typeinfo for std::bad_exception
+00120624 00000008 R typeinfo for std::exception
+0012062c 00000020 R typeinfo name for __cxxabiv1::__forced_unwind
+0012064c 00000024 R typeinfo name for __cxxabiv1::__foreign_exception
+00120670 00000012 R typeinfo name for std::bad_exception
+00120684 0000000d R typeinfo name for std::exception
+00120694 00000014 R vtable for std::bad_exception
+001206a8 0000000c R typeinfo for __cxxabiv1::__si_class_type_info
+001206b4 00000025 R typeinfo name for __cxxabiv1::__si_class_type_info
+001206dc 0000002c R vtable for __cxxabiv1::__si_class_type_info
+00120708 00000008 R typeinfo for std::type_info
+00120710 0000000d R typeinfo name for std::type_info
+00120720 0000000c R typeinfo for __cxxabiv1::__class_type_info
+0012072c 00000022 R typeinfo name for __cxxabiv1::__class_type_info
+00120750 0000002c R vtable for __cxxabiv1::__class_type_info
+0012077c 00000060 R __inv_pio4
+001207e0 000000e0 R __sincosf_table
+00120908 00000004 R _global_impure_ptr
+00120938 00000010 r blanks.8759
+00120948 00000010 r zeroes.8760
+0012099c 0000006c R __action_table
+00120a08 00000100 R __chclass
+00120b08 0000006c R __state_table
+00120b74 00000101 R _ctype_
+00120c80 00000070 R dotab_stdnull
+00120cf0 r 
+00120d6c R __exidx_start
+00120edc R __exidx_end
+00121000 W __stacksize__
+00121004 00000004 d framerate
+00121008 00000008 d framerateCounter
+00121010 00000070 d romFS_devoptab
+00121080 00000001 d botFormat
+00121084 00000008 d doubleBuf
+0012108c 00000001 d topFormat
+00121090 00000004 d queueLock
+00121094 00000004 d gspLastEvent
+00121098 00000004 d aptFlags
+0012109c 00000001 d aptHomeAllowed
+001210a0 00000004 V __ctru_linear_heap_size
+001210a4 00000401 d __cwd
+001214a8 00000070 d sdmc_devoptab
+00121518 00000004 D __cxxabiv1::__unexpected_handler
+0012151c 00000004 D __cxxabiv1::__terminate_handler
+00121520 00000001 D __fdlib_version
+00121524 0000000c d __sfp_recursive_mutex
+00121530 0000000c d __sinit_recursive_mutex
+0012153c 00000004 D _impure_ptr
+00121540 00000460 d impure_data
+001219a0 00000408 D __malloc_av_
+00121da8 00000004 D __malloc_sbrk_base
+00121dac 00000004 D __malloc_trim_threshold
+00121db0 0000000c d __malloc_recursive_mutex
+00121dbc 0000000c D __atexit_recursive_mutex
+00121dc8 0000016c D __global_locale
+00121f34 00000004 d defaultDevice
+00121f38 0000008c D devoptab_list
+00121fc4 00000400 d _current_working_directory
+001223c4 00000004 d __hndl_lock
+001223c8 0000000c d __stderr_handle
+001223d4 0000000c d __stdin_handle
+001223e0 0000000c d __stdout_handle
+001223ec 00001000 d handles
+001233ec t __frame_dummy_init_array_entry
+001233ec T __init_array_start
+001233ec B __preinit_array_end
+001233ec B __preinit_array_start
+001233ec D __tdata_lma
+001233ec D __tdata_lma_end
+001233ec D __TMC_END__
+001233ec d __TMC_LIST__
+001233f4 t __do_global_dtors_aux_fini_array_entry
+001233f4 T __fini_array_start
+001233f4 T __init_array_end
+001233f8 T __bss_start__
+001233f8 T __fini_array_end
+001233f8 b saved_stack
+00123400 b completed.10434
+00123404 b object.10439
+0012341c 00000040 b s_projBot
+0012345c 00000040 b s_projTop
+0012349c 00000004 b uLoc_mdlvMtx
+001234a0 00000004 b uLoc_projMtx
+001234a4 00000004 b s_glyphSheets
+001234a8 00000004 b s_textScale
+001234ac 0000000c b hookCookie
+001234b8 00000010 b cpuTime
+001234c8 00000004 b firstTarget
+001234cc 00000008 b frameCounter
+001234d4 00000004 b frameEndCb
+001234d8 00000004 b frameEndCbData
+001234dc 00000001 b frameStage
+001234e0 00000010 b gpuTime
+001234f0 00000001 b inFrame
+001234f1 00000001 b inSafeTransfer
+001234f2 00000001 b initialized
+001234f4 00000004 b lastTarget
+001234f8 0000000c b linkedTarget
+00123504 00000001 b measureGpuTime
+00123508 000000c0 b C3Di_FVUnifEverDirty
+001235c8 00000008 b C3Di_IVUnifEverDirty
+001235d0 00000018 b C3Di_ShaderFVecData
+001235e8 0000000c b sAddrMap
+001235f4 00000008 b sVramPool
+001235fc 00000008 b sLinearPool
+00123604 0000000c b sAddrMap
+00123610 00000401 b __component
+00123a14 00000004 V __romfs_path
+00123a18 00000802 b __utf16path
+0012421c 00000004 b romfs_mount_list
+00124220 00000001 V __ctru_speedup
+00124224 00000004 b sharedFontAddr
+00124228 00000002 b currentBuffer
+0012422a 00000001 b enable3d
+0012422c 00000004 b screenAlloc
+00124230 00000004 b screenFree
+00124234 00000004 b boundQueue
+00124238 00000004 b curQueue
+0012423c 00000001 b isActive
+0012423d 00000001 b isRunning
+0012423e 00000001 b shouldStop
+00124240 00000004 b gspEvent
+00124244 0000001c b gspEventCb
+00124260 0000001c b gspEventCbData
+0012427c 00000007 b gspEventCbOneShot
+00124284 0000001c b gspEventCounts
+001242a0 00000004 b gspEventData
+001242a4 00000004 b gspEventThread
+001242a8 00000038 b gspEvents
+001242e0 00000004 b gspRefCount
+001242e4 00000001 b gspRunEvents
+001242e5 00000001 b aptChainloadMediatype
+001242e8 00000008 b aptChainloadTid
+001242f0 00000004 b aptEventHandlerThread
+001242f4 0000000c b aptEvents
+00124300 0000000c b aptFirstHook
+0012430c 00000001 b aptHomeButtonState
+00124310 00000004 b aptLockHandle
+00124314 00000004 b aptMessageFunc
+00124318 00000004 b aptMessageFuncData
+0012431c 00001000 b aptParameters
+0012531c 00000001 b aptRecentHomeButtonState
+00125320 00000004 b aptRefCount
+00125324 00000008 b aptSleepEvent
+0012532c 00000001 b flagInit.8300
+0012532d 00000001 b flagValue.8301
+00125330 00000004 b serviceName.7930
+00125334 00000006 b aVec
+0012533c 00000004 b cPos
+00125340 00000006 b gRate
+00125348 00000004 b hidRefCount
+0012534c 00000004 b kDown
+00125350 00000004 b kHeld
+00125354 00000004 b kOld
+00125358 00000004 b kUp
+0012535c 00000004 b tPos
+00125360 00000004 b ptmSysmHandle
+00125364 00000004 b ptmSysmRefCount
+00125368 00000080 b fsExemptArchives
+001253e8 00000004 b fsuHandle
+001253ec 00000004 b fsuRefCount
+001253f0 00000004 b swkbdSharedMem
+001253f4 00000004 b swkbdSharedMemHandle
+001253f8 00000004 V __ctru_heap_size
+001253fc 00000008 b sMappablePool
+00125404 0000000c b sAddrMap
+00125410 00000004 b arbiter
+00125414 00000004 b srvHandle
+00125418 00000004 b srvRefCount
+0012541c 00000004 b csPos
+00125420 00000004 b irrstRefCount
+00125424 00000004 b kHeld
+00125428 00000004 b srvPmHandle
+00125430 00000008 b sdmcArchive
+00125438 00000001 b sdmcInitialised
+0012543c 00000010 b (anonymous namespace)::emergency_pool
+0012544c 00000004 b (anonymous namespace)::__new_handler
+00125450 0000000c b eh_globals
+0012545c 00000028 B __malloc_current_mallinfo
+00125484 00000004 B __malloc_max_sbrked_mem
+00125488 00000004 B __malloc_max_total_mem
+0012548c 00000004 B __malloc_top_pad
+00125490 00000004 b heap_start.7420
+00125494 00000004 B fake_heap_end
+00125498 00000004 B fake_heap_start
+0012549c 00000400 b temp_cwd
+0012589c 00000048 B __syscalls
+001258e8 000005a0 B __C2Di_Context
+00125e88 000002d0 B __C3D_Context
+00126158 00000020 B C3D_IVUnif
+00126178 000000c0 B C3D_FVUnifDirty
+00126238 00000002 B C3D_BoolUnifsDirty
+0012623c 00000008 B C3D_IVUnifDirty
+00126244 00000004 B C3D_BoolUnifs
+00126248 00000c00 B C3D_FVUnif
+00126e48 00000004 B g_sharedFont
+00126e4c 00000008 B gfxBottomFramebuffers
+00126e54 00000004 B gspSharedMemHandle
+00126e58 0000001c B bottomFramebufferInfo
+00126e74 00000004 B gspEvent
+00126e78 00000008 B gfxTopLeftFramebuffers
+00126e80 00000008 B gfxTopRightFramebuffers
+00126e88 0000001c B topFramebufferInfo
+00126ea4 00000001 B gfxThreadID
+00126ea8 00000004 B gfxSharedMemory
+00126eac 00000004 B gfxTopFramebufferMaxSize
+00126eb0 00000004 B gfxBottomFramebufferMaxSize
+00126eb4 00000004 B gxCmdBuf
+00126eb8 00000004 B gpuCmdBuf
+00126ebc 00000004 B gpuCmdBufOffset
+00126ec0 00000004 B gpuCmdBufSize
+00126ec4 00000004 B gspGpuHandle
+00126ec8 00000004 B hidMemHandle
+00126ecc 00000004 B hidHandle
+00126ed0 00000004 B hidSharedMem
+00126ed4 00000014 B hidEvents
+00126ee8 00000004 B __system_retAddr
+00126eec 00000004 B __ctru_linear_heap
+00126ef0 00000004 B __ctru_heap
+00126ef4 00000004 B __system_argv
+00126ef8 00000004 B __system_argc
+00126efc 00000004 B irrstHandle
+00126f00 00000004 B irrstEvent
+00126f04 00000004 B irrstMemHandle
+00126f08 00000004 B irrstSharedMem
+00126f0c B __tls_start
+00128318 B __bss_end__
+00128318 A __end__
+00128318 B __tls_end
