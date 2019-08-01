@@ -1,6 +1,7 @@
 #include "M2VPage.h"
 #include "DrawingPage.h"
 #include <cassert>
+#include <math.h>
 
 Pages DrawingPage::run(){
   //Treat inputs
@@ -45,8 +46,17 @@ void DrawingPage::drawPixel(unsigned int x, unsigned int y){
 }
 
 void DrawingPage::drawLine(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2){
-  for (unsigned int ratio = 0; ratio <= 100; ratio += 10) {
-    map(x1, y1, x2, y2, (float) ratio/100);
+  unsigned int cell = 0;
+  switch (tool) {
+    case PEN_1:
+    cell = 1;
+    break;
+    default: break;
+  }
+  unsigned int distance = sqrt( pow((int)(x2-x1), 2) + pow((int)(y2-y1), 2));
+  unsigned int k = distance/cell;
+  for (unsigned int ratio = 1; ratio <= k; ratio++) {
+    map(x1, y1, x2, y2, (float) ratio/k);
   }
 }
 
