@@ -48,6 +48,12 @@ enum ButtonInput : int{
   RED_INPUT,
   GREEN_INPUT,
   BLUE_INPUT,
+  COLOR_PICKER_INPUT,
+  CLR_PICK_1_INPUT,
+  CLR_PICK_2_INPUT,
+  RED_PICKER_INPUT,
+  GREEN_PICKER_INPUT,
+  BLUE_PICKER_INPUT
 };
 
 enum DrawTools : int {
@@ -63,6 +69,7 @@ enum Color : u32{
   RED = C2D_Color32(0xFF, 0x00, 0x00, 0xFF),
   GREEN = C2D_Color32(0x00, 0xFF, 0x00, 0xFF),
   BLUE = C2D_Color32(0x00, 0x00, 0xFF, 0xFF),
+  YELLOW = C2D_Color32(255, 255, 0, 0xFF),
   BLACK = C2D_Color32(0x00, 0x00, 0x00, 0xFF),
   WHITE = C2D_Color32(0XFF, 0XFF, 0XFF, 0xFF)
 };

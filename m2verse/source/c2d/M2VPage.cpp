@@ -75,7 +75,7 @@ void ConnectionPage::init(){
     C2D_SpriteSetCenter(&sprites[i], 0.5f, 0.5f);
     C2D_SpriteSetPos(&sprites[i], TOP_MAX_X/2, TOP_MAX_Y/2 - 30);
   }
-  C2D_SpriteSetScale(&sprites[0], 0.17f, 0.17f);
+  C2D_SpriteSetScale(&sprites[0], 0.34f, 0.34f);
 }
 
 void ConnectionPage::update(){

@@ -19,6 +19,12 @@ private:
   u32 drawing2[DRAW_MAX_X][DRAW_MAX_Y];
   DrawTools tool = PEN_1;
   u32 drawColor = BLACK;
+  int r1 = 0, g1 = 0, b1 = 0;
+  int r2 = 200, g2 = 12, b2 = 70;
+  u32 colorPick1 = C2D_Color32(r1, g1, b1, 0xFF);
+  u32 colorPick2 = C2D_Color32(r2, g2, b2, 0xFF);
+  bool select1 = true;
+  bool colorPickerOpen = false;
   unsigned int curX2=0, curY2=0;
   ButtonInput checkButtonInput() const;
   void clearDrawing();
