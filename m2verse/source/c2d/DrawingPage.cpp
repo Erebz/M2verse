@@ -291,6 +291,8 @@ void DrawingPage::update(){
         switch (checkButtonInput()){
           case COLOR_PICKER_INPUT:
           colorPickerOpen = false;
+          if(select1) this->drawColor = colorPick1;
+          else this->drawColor = colorPick2;
           break;
           case CLR_PICK_1_INPUT:
           if(tool >= ERASER_1 && tool <= ERASER_3) this->tool = PEN_2;
