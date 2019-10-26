@@ -18,6 +18,7 @@ M2V_C2D::~M2V_C2D(){
 void M2V_C2D::init(){
   romfsInit();
   gfxInitDefault();
+  httpcInit(4 * 1024 * 1024);
   C3D_Init(C3D_DEFAULT_CMDBUF_SIZE);
   //C2D_Init(C2D_DEFAULT_MAX_OBJECTS);
   C2D_Init(64060);
@@ -34,6 +35,7 @@ void M2V_C2D::quit(){
   currentPage = NULL;
   C2D_Fini();
   C3D_Fini();
+  httpcExit();
   gfxExit();
   romfsExit();
 }

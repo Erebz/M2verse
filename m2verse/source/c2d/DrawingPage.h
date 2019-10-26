@@ -8,6 +8,7 @@
 #include "../core/M2VPost.h"
 #include "../core/M2VData.h"
 #include "M2VPage.h"
+#include <inttypes.h>
 
 class DrawingPage : public M2VPage{
 private:
@@ -26,6 +27,7 @@ private:
   bool select1 = true;
   bool colorPickerOpen = false;
   unsigned int curX2=0, curY2=0;
+  Result res;
   ButtonInput checkButtonInput() const;
   void clearDrawing();
   void save();

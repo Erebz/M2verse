@@ -2,6 +2,8 @@
 #include "DrawingPage.h"
 #include <cassert>
 #include <math.h>
+#include <string>
+#include <inttypes.h>
 
 Pages DrawingPage::run(){
   //Treat inputs
@@ -148,7 +150,18 @@ void DrawingPage::update(){
   u32 kDown = hidKeysDown();
 
   if(kDown & KEY_A) {
-    keyboardInput(title, TITLE_MAX_LENGTH + 1, "Enter  the title.");
+    //keyboardInput(title, TITLE_MAX_LENGTH + 1, "Enter  the title.");
+    /*std::string s = "{\"title\": \"TEST\"}";
+    //s += title;
+    //s += "\"}";
+    int data_size = s.length();
+    char * data = new char[data_size + 1];
+    for(int i=0; i < data_size; i++){
+      data[i] = s[i];
+    }
+    data[data_size] = '\0';*/
+    const char* data = "{\"title\": \"TEST\"}";
+    this->res = http_post("http://yacinehamdiserver.ddns.net/M2verse/index.php", data);
   }
 
   if(kDown & KEY_Y) undo();
@@ -321,7 +334,7 @@ void DrawingPage::update(){
     C2D_SceneBegin(top);
     C2D_DrawSprite(&sprites[0]);
     message("Press A to publish your drawing.");
-
+    //message((const char*) this->res);
     C2D_SceneBegin(bottom);
 
     //render tool bar

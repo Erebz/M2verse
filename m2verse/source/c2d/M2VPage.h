@@ -42,6 +42,7 @@ protected:
   touchPosition touch;
   unsigned int curX = 0, curY = 0;
   bool input = false;
+  Result http_post(const char* url, const char* data);
 
 public:
   M2VPage(C3D_RenderTarget * top = NULL, C3D_RenderTarget * bottom = NULL) : top(top), bottom(bottom) {
