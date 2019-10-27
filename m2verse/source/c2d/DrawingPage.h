@@ -36,6 +36,7 @@ private:
   void drawPixel(unsigned int x, unsigned int y);
   void drawLine(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2);
   void map(unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2, float ratio);
+  Result sendDrawingPost();
 public:
   DrawingPage();
   DrawingPage(C3D_RenderTarget * top = NULL, C3D_RenderTarget * bottom = NULL) : M2VPage(top, bottom) {

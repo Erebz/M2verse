@@ -3,6 +3,7 @@
 #include <cassert>
 #include <math.h>
 #include <string>
+#include <stdio.h>
 #include <inttypes.h>
 
 Pages DrawingPage::run(){
@@ -150,18 +151,8 @@ void DrawingPage::update(){
   u32 kDown = hidKeysDown();
 
   if(kDown & KEY_A) {
-    //keyboardInput(title, TITLE_MAX_LENGTH + 1, "Enter  the title.");
-    /*std::string s = "{\"title\": \"TEST\"}";
-    //s += title;
-    //s += "\"}";
-    int data_size = s.length();
-    char * data = new char[data_size + 1];
-    for(int i=0; i < data_size; i++){
-      data[i] = s[i];
-    }
-    data[data_size] = '\0';*/
-    const char* data = "{\"title\": \"TEST\"}";
-    this->res = http_post("http://yacinehamdiserver.ddns.net/M2verse/index.php", data);
+    keyboardInput(title, TITLE_MAX_LENGTH + 1, "Enter  the title.");
+    this->res = this->sendDrawingPost();
   }
 
   if(kDown & KEY_Y) undo();
@@ -573,3 +564,21 @@ void DrawingPage::update(){
     }
     return button;
   }
+
+Result DrawingPage::sendDrawingPost(){
+  std::string s = "{\"title\" : \"";s += title; s += "\",";
+  for(int y=0; y < DRAW_MAX_Y; y++){
+    s += "\""; s += std::to_string(y); s += "\" : [";
+    /*for(int x=0; x < DRAW_MAX_X; x++){
+      s += "\"";
+      s += std::to_string(this->drawing[x][y]);
+      s+="\"";
+      if(x!=DRAW_MAX_X-1)s += ",";
+    }*/
+    s+= "]";
+    if(y!=DRAW_MAX_Y-1) s += ",";
+  }
+  s += "}";
+  const char* data = s.c_str();
+  return http_post(this->website, data);
+}

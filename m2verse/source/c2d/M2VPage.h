@@ -15,6 +15,7 @@ private:
   SwkbdState swkbd;
   SwkbdButton button = SWKBD_BUTTON_NONE;
 protected:
+  const char* website = "http://yacinehamdiserver.ddns.net/M2verse"; 
   C3D_RenderTarget * top = NULL;
   C3D_RenderTarget * bottom = NULL;
   u32 clrGreen = C2D_Color32(0x83, 0xEC, 0x8A, 0xFF);
